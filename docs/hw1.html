@@ -156,7 +156,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#숙제해라-네" id="toc-숙제해라-네" class="nav-link active" data-scroll-target="#숙제해라-네">숙제해라! 네~</a></li>
+  <li><a href="#페이지" id="toc-페이지" class="nav-link active" data-scroll-target="#페이지">84페이지</a></li>
+  <li><a href="#페이지-1" id="toc-페이지-1" class="nav-link" data-scroll-target="#페이지-1">115 페이지</a></li>
+  <li><a href="#페이지-2" id="toc-페이지-2" class="nav-link" data-scroll-target="#페이지-2">130 페이지</a></li>
   </ul>
 </nav>
     </div>
@@ -182,11 +184,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="숙제해라-네" class="level2">
-<h2 class="anchored" data-anchor-id="숙제해라-네">숙제해라! 네~</h2>
-<section id="p.84-q1.-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.84-q1.-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.">P.84) Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.</h6>
-<div id="96471362" class="cell" data-execution_count="1">
+<section id="페이지" class="level2">
+<h2 class="anchored" data-anchor-id="페이지">84페이지</h2>
+<section id="q1.-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q1.-다음-표의-내용을-데이터-프레임으로-만들어-출력해-보세요.">Q1. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.</h6>
+<div id="242a0df9" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip install pandas</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -194,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"가격"</span>   : [<span class="dv">1800</span>, <span class="dv">1500</span>, <span class="dv">3000</span>],</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"판매량"</span> : [<span class="dv">24</span>, <span class="dv">38</span>, <span class="dv">13</span>]})</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="141">
+<div class="cell-output cell-output-display" data-execution_count="71">
 <div>
 
 
@@ -234,9 +236,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><br></p>
 </section>
-<section id="p.84-q2.-앞에서-만든-데이터-프레임을-이용해-과일의-가격-평균과-판매량-평균을-구해-보세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.84-q2.-앞에서-만든-데이터-프레임을-이용해-과일의-가격-평균과-판매량-평균을-구해-보세요.">P.84) Q2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.</h6>
-<div id="8dae4758" class="cell" data-execution_count="2">
+<section id="q2.-앞에서-만든-데이터-프레임을-이용해-과일의-가격-평균과-판매량-평균을-구해-보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q2.-앞에서-만든-데이터-프레임을-이용해-과일의-가격-평균과-판매량-평균을-구해-보세요.">Q2. 앞에서 만든 데이터 프레임을 이용해 과일의 가격 평균과 판매량 평균을 구해 보세요.</h6>
+<div id="cd199ad1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>price_avg <span class="op">=</span> <span class="bu">sum</span>(df[<span class="st">"가격"</span>]) <span class="op">/</span> <span class="dv">3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>vol_avg <span class="op">=</span> <span class="bu">sum</span>(df[<span class="st">"판매량"</span>]) <span class="op">/</span> <span class="dv">3</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -249,14 +251,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="p.115-q1.-mpg-데이터를-불러와-복사본을-만드세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.115-q1.-mpg-데이터를-불러와-복사본을-만드세요.">P.115) Q1. <code>mpg</code> 데이터를 불러와 복사본을 만드세요.</h6>
-<div id="bfe09b04" class="cell" data-execution_count="3">
+</section>
+<section id="페이지-1" class="level2">
+<h2 class="anchored" data-anchor-id="페이지-1">115 페이지</h2>
+<section id="q1.-mpg-데이터를-불러와-복사본을-만드세요." class="level6">
+<h6 class="anchored" data-anchor-id="q1.-mpg-데이터를-불러와-복사본을-만드세요.">Q1. <code>mpg</code> 데이터를 불러와 복사본을 만드세요.</h6>
+<div id="9dd2c1f0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mpg 데이터 불러오기</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mpg_raw <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv'</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>mpg_new <span class="op">=</span> mpg_raw.copy()</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>mpg_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="143">
+<div class="cell-output cell-output-display" data-execution_count="73">
 <div>
 
 
@@ -441,9 +446,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><br></p>
 </section>
-<section id="p.115-q2.-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-수정하세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.115-q2.-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-수정하세요.">P.115) Q2. 복사본 데이터를 이용해 <code>cty</code>는 <code>city</code>로, <code>hwy</code>는 <code>highway</code>로 수정하세요.</h6>
-<div id="6159c313" class="cell" data-execution_count="4">
+<section id="q2.-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-수정하세요." class="level6">
+<h6 class="anchored" data-anchor-id="q2.-복사본-데이터를-이용해-cty는-city로-hwy는-highway로-수정하세요.">Q2. 복사본 데이터를 이용해 <code>cty</code>는 <code>city</code>로, <code>hwy</code>는 <code>highway</code>로 수정하세요.</h6>
+<div id="9805bed8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#cty -&gt; city</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mpg_new <span class="op">=</span> mpg_new.rename(columns <span class="op">=</span> {<span class="st">'cty'</span> : <span class="st">'city'</span>})</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -452,11 +457,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><br></p>
 </section>
-<section id="p.115-q3.-데이터-일부를-출력해-변수명이-바뀌었는지-확인해-보세요.-다음과-같은-결과물이-출력되어야-합니다." class="level6">
-<h6 class="anchored" data-anchor-id="p.115-q3.-데이터-일부를-출력해-변수명이-바뀌었는지-확인해-보세요.-다음과-같은-결과물이-출력되어야-합니다.">P.115) Q3. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해 보세요. 다음과 같은 결과물이 출력되어야 합니다.</h6>
-<div id="15cce006" class="cell" data-execution_count="5">
+<section id="q3.-데이터-일부를-출력해-변수명이-바뀌었는지-확인해-보세요.-다음과-같은-결과물이-출력되어야-합니다." class="level6">
+<h6 class="anchored" data-anchor-id="q3.-데이터-일부를-출력해-변수명이-바뀌었는지-확인해-보세요.-다음과-같은-결과물이-출력되어야-합니다.">Q3. 데이터 일부를 출력해 변수명이 바뀌었는지 확인해 보세요. 다음과 같은 결과물이 출력되어야 합니다.</h6>
+<div id="fedd56ef" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mpg_new.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="145">
+<div class="cell-output cell-output-display" data-execution_count="75">
 <div>
 
 
@@ -555,11 +560,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<p><br></p>
 </section>
-<section id="p.130-q1.-midwest.csv를-불러와-데이터의-특징을-파악하세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.130-q1.-midwest.csv를-불러와-데이터의-특징을-파악하세요.">P.130) Q1. <code>midwest.csv</code>를 불러와 데이터의 특징을 파악하세요.</h6>
-<div id="f231230b" class="cell" data-execution_count="6">
+</section>
+<section id="페이지-2" class="level2">
+<h2 class="anchored" data-anchor-id="페이지-2">130 페이지</h2>
+<section id="q1.-midwest.csv를-불러와-데이터의-특징을-파악하세요." class="level6">
+<h6 class="anchored" data-anchor-id="q1.-midwest.csv를-불러와-데이터의-특징을-파악하세요.">Q1. <code>midwest.csv</code>를 불러와 데이터의 특징을 파악하세요.</h6>
+<div id="61f4803a" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># midwest.csv 데이터 불러오기</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>midwest_raw <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/midwest.csv'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>midwest_new <span class="op">=</span> midwest_raw.copy()</span>
@@ -607,7 +614,7 @@ Data columns (total 28 columns):
 dtypes: float64(15), int64(10), object(3)
 memory usage: 95.7+ KB</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="146">
+<div class="cell-output cell-output-display" data-execution_count="76">
 <div>
 
 
@@ -840,9 +847,9 @@ memory usage: 95.7+ KB</code></pre>
 </div>
 <p><br></p>
 </section>
-<section id="p.130-q2.-poptotal전체-인구-변수를-total로-popasian아시아-인구변수를-asian으로-수정하세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.130-q2.-poptotal전체-인구-변수를-total로-popasian아시아-인구변수를-asian으로-수정하세요.">P.130) Q2. <code>poptotal</code>(전체 인구) 변수를 <code>total</code>로, <code>popasian</code>(아시아 인구)변수를 <code>asian</code>으로 수정하세요.</h6>
-<div id="5791496e" class="cell" data-execution_count="7">
+<section id="q2.-poptotal전체-인구-변수를-total로-popasian아시아-인구변수를-asian으로-수정하세요." class="level6">
+<h6 class="anchored" data-anchor-id="q2.-poptotal전체-인구-변수를-total로-popasian아시아-인구변수를-asian으로-수정하세요.">Q2. <code>poptotal</code>(전체 인구) 변수를 <code>total</code>로, <code>popasian</code>(아시아 인구)변수를 <code>asian</code>으로 수정하세요.</h6>
+<div id="c35c89f5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#poptotal -&gt; total</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>midwest_new <span class="op">=</span> midwest_new.rename(columns <span class="op">=</span> {<span class="st">'poptotal'</span> : <span class="st">'total'</span>})</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -851,9 +858,9 @@ memory usage: 95.7+ KB</code></pre>
 </div>
 <p><br></p>
 </section>
-<section id="p.130-q3.-total-asian-변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하고-히스토그램을-만들어-분포를-살펴보세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.130-q3.-total-asian-변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하고-히스토그램을-만들어-분포를-살펴보세요.">P.130) Q3. <code>total</code>, <code>asian</code> 변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.</h6>
-<div id="202b10a0" class="cell" data-execution_count="8">
+<section id="q3.-total-asian-변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하고-히스토그램을-만들어-분포를-살펴보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q3.-total-asian-변수를-이용해-전체-인구-대비-아시아-인구-백분율-파생변수를-추가하고-히스토그램을-만들어-분포를-살펴보세요.">Q3. <code>total</code>, <code>asian</code> 변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.</h6>
+<div id="2a3b393d" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>midwest_new[<span class="st">'a_ratio'</span>] <span class="op">=</span> (midwest_new[<span class="st">"asian"</span>] <span class="op">/</span> midwest_new[<span class="st">"total"</span>]) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>midwest_new[<span class="st">'a_ratio'</span>].plot.hist()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -872,9 +879,9 @@ memory usage: 95.7+ KB</code></pre>
 </div>
 <p><br></p>
 </section>
-<section id="p.130-q4.-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그-외에는-small을-부여한-파생변수를-만들어-보세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.130-q4.-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그-외에는-small을-부여한-파생변수를-만들어-보세요.">P.130) Q4. 아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 <code>'large'</code>, 그 외에는 <code>'small'</code>을 부여한 파생변수를 만들어 보세요.</h6>
-<div id="7c005379" class="cell" data-execution_count="9">
+<section id="q4.-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그-외에는-small을-부여한-파생변수를-만들어-보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q4.-아시아-인구-백분율-전체-평균을-구하고-평균을-초과하면-large-그-외에는-small을-부여한-파생변수를-만들어-보세요.">Q4. 아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 <code>'large'</code>, 그 외에는 <code>'small'</code>을 부여한 파생변수를 만들어 보세요.</h6>
+<div id="df559add" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#아시아 인구 백분율 전체 평균</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>midwest_new[<span class="st">'a_mean'</span>] <span class="op">=</span> (midwest_new[<span class="st">'a_ratio'</span>].mean())</span>
@@ -882,7 +889,7 @@ memory usage: 95.7+ KB</code></pre>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#평균을 초과하는지 비교</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>midwest_new[<span class="st">'vs_mean'</span>] <span class="op">=</span> np.where(midwest_new[<span class="st">'a_ratio'</span>] <span class="op">&gt;</span> midwest_new[<span class="st">'a_mean'</span>], <span class="st">'large'</span>, <span class="st">'small'</span>)</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>midwest_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="149">
+<div class="cell-output cell-output-display" data-execution_count="79">
 <div>
 
 
@@ -1187,9 +1194,9 @@ memory usage: 95.7+ KB</code></pre>
 </div>
 <p><br></p>
 </section>
-<section id="p.130-q5.-large와-small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요." class="level6">
-<h6 class="anchored" data-anchor-id="p.130-q5.-large와-small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요.">P.130) Q5. <code>'large'</code>와 <code>'small'</code>에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.</h6>
-<div id="65a84938" class="cell" data-execution_count="10">
+<section id="q5.-large와-small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q5.-large와-small에-해당하는-지역이-얼마나-많은지-빈도표와-빈도-막대-그래프를-만들어-확인해-보세요.">Q5. <code>'large'</code>와 <code>'small'</code>에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.</h6>
+<div id="df31e082" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#빈도 구하기</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>count_vs <span class="op">=</span> midwest_new[<span class="st">'vs_mean'</span>].value_counts()</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>count_vs</span>
