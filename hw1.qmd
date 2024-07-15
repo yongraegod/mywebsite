@@ -68,8 +68,6 @@ midwest_new.tail()
 midwest_new.shape
 midwest_new.info()
 midwest_new.describe()
-
-
 ```
 </br>
 
