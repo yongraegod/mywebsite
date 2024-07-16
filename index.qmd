@@ -1,15 +1,18 @@
 ---
-title: "미래 하이염"
+title: "전 토리에염"
 jupyter: python3
 toc: false
 about:
     id: hero-heading
     template: jolla
-    image: mirae.jpg
+    image: img/tory.jpg
     links: 
       - icon: github
         text: 나의 깃허부
         href: https://github.com/yongraegod
+      - icon: blog
+        text: 네이버 블로그
+        href: https://blog.naver.com/ohhyunwok
 ---
 ---
 ### 킁킁킁
