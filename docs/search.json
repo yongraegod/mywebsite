@@ -74,13 +74,27 @@
     "href": "hw2.html",
     "title": "hw2",
     "section": "",
-    "text": "# mpg 데이터 불러오기\nimport pandas as pd\nimport numpy as np\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nmpg_a = mpg.query('displ &lt;= 4')\nmpg_b = mpg.query('displ &gt;= 5')\n\nmpg_a['hwy'].mean(), mpg_b['hwy'].mean()\n\n(np.float64(25.96319018404908), np.float64(18.07894736842105))\n\n\n\n\n\n\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")\n\nmpg_audi['cty'].mean(), mpg_toyota['cty'].mean()\n\n(np.float64(17.61111111111111), np.float64(18.529411764705884))"
+    "text": "# mpg 데이터 불러오기\nimport pandas as pd\nimport numpy as np\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nmpg_a = mpg.query('displ &lt;= 4')\nmpg_b = mpg.query('displ &gt;= 5')\n\nmpg_a['hwy'].mean(), mpg_b['hwy'].mean()\n\n(np.float64(25.96319018404908), np.float64(18.07894736842105))\n\n\n\n\n\n\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")\n\nmpg_audi['cty'].mean(), mpg_toyota['cty'].mean()\n\n(np.float64(17.61111111111111), np.float64(18.529411764705884))\n\n\n\n\n\n\nmpg_new = mpg.query('manufacturer in [\"chevrolet\", \"ford\", \"honda\"]')\nmpg_new['hwy'].mean()\n\nnp.float64(22.50943396226415)"
   },
   {
     "objectID": "hw2.html#페이지",
     "href": "hw2.html#페이지",
     "title": "hw2",
     "section": "",
-    "text": "# mpg 데이터 불러오기\nimport pandas as pd\nimport numpy as np\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nmpg_a = mpg.query('displ &lt;= 4')\nmpg_b = mpg.query('displ &gt;= 5')\n\nmpg_a['hwy'].mean(), mpg_b['hwy'].mean()\n\n(np.float64(25.96319018404908), np.float64(18.07894736842105))\n\n\n\n\n\n\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")\n\nmpg_audi['cty'].mean(), mpg_toyota['cty'].mean()\n\n(np.float64(17.61111111111111), np.float64(18.529411764705884))"
+    "text": "# mpg 데이터 불러오기\nimport pandas as pd\nimport numpy as np\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nmpg_a = mpg.query('displ &lt;= 4')\nmpg_b = mpg.query('displ &gt;= 5')\n\nmpg_a['hwy'].mean(), mpg_b['hwy'].mean()\n\n(np.float64(25.96319018404908), np.float64(18.07894736842105))\n\n\n\n\n\n\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")\n\nmpg_audi['cty'].mean(), mpg_toyota['cty'].mean()\n\n(np.float64(17.61111111111111), np.float64(18.529411764705884))\n\n\n\n\n\n\nmpg_new = mpg.query('manufacturer in [\"chevrolet\", \"ford\", \"honda\"]')\nmpg_new['hwy'].mean()\n\nnp.float64(22.50943396226415)"
+  },
+  {
+    "objectID": "hw2.html#페이지-1",
+    "href": "hw2.html#페이지-1",
+    "title": "hw2",
+    "section": "153 페이지",
+    "text": "153 페이지\n\nQ1. 'audi'에서 생산한 자동차 중에 어떤 자동차 모델의 hwy(고속도로 연비)가 높은지 알아보려고 합니다. audi'에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차의 데이터를 출력하세요.\n\naudi_mpg = mpg.query(\"manufacturer == 'audi'\")\naudi_mpg.sort_values('hwy', ascending = False).head()\n\nmpg.query(\"manufacturer == 'audi'\") \\\n   .sort_values('hwy', ascending = False) \\\n   .head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n9\naudi\na4 quattro\n2.0\n2008\n4\nmanual(m6)\n4\n20\n28\np\ncompact"
+  },
+  {
+    "objectID": "hw2.html#페이지-2",
+    "href": "hw2.html#페이지-2",
+    "title": "hw2",
+    "section": "158 페이지",
+    "text": "158 페이지\nmpg데이터는 연비를 나타내는 변수가 hwy(고속도로 연비), cty(도시 연비) 두 종류로 분리되어 있습니다. 두 변수는 각각 활용하는 대신 하나의 합산 연비 변수를 만들어 분석하려고 합니다.\n\nQ1. mpg데이터 복사본을 만들고, cty와 hwy를 더한 합산 연비 변수를 추가하세요.\n\nmpg_new = mpg.copy()\nmpg_new = mpg_new.assign(mileage = mpg_new['cty'] + mpg_new['hwy'])\nmpg_new.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\nmileage\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n47\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n50\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n51\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n51\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n42\n\n\n\n\n\n\n\n\n\n\nQ2. 앞에서 만든 ’합산 연비 변수’를 2로 나눠 ’평균 연비 변수’를 추가하세요.\n\nmpg_new = mpg_new.assign(mileage_mean = mpg_new['mileage'] / 2)\nmpg_new.head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\nmileage\nmileage_mean\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n47\n23.5\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n50\n25.0\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n51\n25.5\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n51\n25.5\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n42\n21.0\n\n\n\n\n\n\n\n\n\n\nQ3. ’평균 연비 변수’가 가장 높은 자동차 3종의 데이터를 출력하세요.\n\nmpg_new.sort_values('mileage', ascending = False).head(3)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\nmileage\nmileage_mean\n\n\n\n\n221\nvolkswagen\nnew beetle\n1.9\n1999\n4\nmanual(m5)\nf\n35\n44\nd\nsubcompact\n79\n39.5\n\n\n212\nvolkswagen\njetta\n1.9\n1999\n4\nmanual(m5)\nf\n33\n44\nd\ncompact\n77\n38.5\n\n\n222\nvolkswagen\nnew beetle\n1.9\n1999\n4\nauto(l4)\nf\n29\n41\nd\nsubcompact\n70\n35.0"
   }
 ]
