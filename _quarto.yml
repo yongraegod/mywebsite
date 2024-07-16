@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "끼요오오오옷옷"
+  title: "yongrae's website"
   navbar:
     left:
       - href: index.qmd

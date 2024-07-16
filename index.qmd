@@ -1,9 +1,18 @@
 ---
-title: "쉽지가 않네요~"
+title: "미래 하이염"
 jupyter: python3
+toc: false
+about:
+    id: hero-heading
+    template: jolla
+    image: mirae.jpg
+    links: 
+      - icon: github
+        text: 나의 깃허부
+        href: https://github.com/yongraegod
 ---
 ---
-### 홈페이지 첫 화면입니다!
+### 킁킁킁
 </br>
 안녕하세요, 데이터 분석 좀 어렵네요ㅋㅋ
 
