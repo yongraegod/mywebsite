@@ -13,8 +13,9 @@ about:
       - icon: blog
         text: 네이버 Blog
         href: https://blog.naver.com/ohhyunwok
+
 ---
----
+
 ### 킁킁킁
 </br>
 안녕하세요, 데이터 분석 좀 어렵네요ㅋㅋ
