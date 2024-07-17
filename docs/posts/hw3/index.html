@@ -22,10 +22,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +102,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -163,8 +203,144 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="damgom3.jpg" class="img-fluid"></p>
 <section id="페이지" class="level2">
 <h2 class="anchored" data-anchor-id="페이지">173 페이지</h2>
+<div id="80b32ff6" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fuel <span class="op">=</span> pd.DataFrame({<span class="st">'fl'</span>       : [<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'p'</span>,<span class="st">'r'</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                     <span class="st">'price_fl'</span> : [<span class="fl">2.35</span>, <span class="fl">2.38</span>, <span class="fl">2.11</span>, <span class="fl">2.76</span>, <span class="fl">2.22</span>]})</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fuel)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mpg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  fl  price_fl
+0  c      2.35
+1  d      2.38
+2  e      2.11
+3  p      2.76
+4  r      2.22
+    manufacturer   model  displ  year  cyl       trans drv  cty  hwy fl  \
+0           audi      a4    1.8  1999    4    auto(l5)   f   18   29  p   
+1           audi      a4    1.8  1999    4  manual(m5)   f   21   29  p   
+2           audi      a4    2.0  2008    4  manual(m6)   f   20   31  p   
+3           audi      a4    2.0  2008    4    auto(av)   f   21   30  p   
+4           audi      a4    2.8  1999    6    auto(l5)   f   16   26  p   
+..           ...     ...    ...   ...  ...         ...  ..  ...  ... ..   
+229   volkswagen  passat    2.0  2008    4    auto(s6)   f   19   28  p   
+230   volkswagen  passat    2.0  2008    4  manual(m6)   f   21   29  p   
+231   volkswagen  passat    2.8  1999    6    auto(l5)   f   16   26  p   
+232   volkswagen  passat    2.8  1999    6  manual(m5)   f   18   26  p   
+233   volkswagen  passat    3.6  2008    6    auto(s6)   f   17   26  p   
+
+    category  
+0    compact  
+1    compact  
+2    compact  
+3    compact  
+4    compact  
+..       ...  
+229  midsize  
+230  midsize  
+231  midsize  
+232  midsize  
+233  midsize  
+
+[234 rows x 11 columns]</code></pre>
+</div>
+</div>
 <section id="q1.-mpg데이터에는-연료-종류를-나타낸-fl변수는-있지만-연료-가격을-나타낸-변수는-없습니다.-앞에서-만든-fuel데이터를-이용해-mpg데이터에-price_fl연료-가격-변수를-추가하세요." class="level6">
 <h6 class="anchored" data-anchor-id="q1.-mpg데이터에는-연료-종류를-나타낸-fl변수는-있지만-연료-가격을-나타낸-변수는-없습니다.-앞에서-만든-fuel데이터를-이용해-mpg데이터에-price_fl연료-가격-변수를-추가하세요.">Q1. <code>mpg</code>데이터에는 연료 종류를 나타낸 <code>fl</code>변수는 있지만 연료 가격을 나타낸 변수는 없습니다. 앞에서 만든 <code>fuel</code>데이터를 이용해 <code>mpg</code>데이터에 <code>price_fl</code>(연료 가격) 변수를 추가하세요.</h6>
+<div id="0a01dece" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.merge(mpg, fuel, how <span class="op">=</span> <span class="st">'left'</span>, on <span class="op">=</span> <span class="st">'fl'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mpg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    manufacturer   model  displ  year  cyl       trans drv  cty  hwy fl  \
+0           audi      a4    1.8  1999    4    auto(l5)   f   18   29  p   
+1           audi      a4    1.8  1999    4  manual(m5)   f   21   29  p   
+2           audi      a4    2.0  2008    4  manual(m6)   f   20   31  p   
+3           audi      a4    2.0  2008    4    auto(av)   f   21   30  p   
+4           audi      a4    2.8  1999    6    auto(l5)   f   16   26  p   
+..           ...     ...    ...   ...  ...         ...  ..  ...  ... ..   
+229   volkswagen  passat    2.0  2008    4    auto(s6)   f   19   28  p   
+230   volkswagen  passat    2.0  2008    4  manual(m6)   f   21   29  p   
+231   volkswagen  passat    2.8  1999    6    auto(l5)   f   16   26  p   
+232   volkswagen  passat    2.8  1999    6  manual(m5)   f   18   26  p   
+233   volkswagen  passat    3.6  2008    6    auto(s6)   f   17   26  p   
+
+    category  price_fl  
+0    compact      2.76  
+1    compact      2.76  
+2    compact      2.76  
+3    compact      2.76  
+4    compact      2.76  
+..       ...       ...  
+229  midsize      2.76  
+230  midsize      2.76  
+231  midsize      2.76  
+232  midsize      2.76  
+233  midsize      2.76  
+
+[234 rows x 12 columns]</code></pre>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="q2.-연료-가격-변수가-잘-추가됐는지-확인하기-위해-modelflprice_fl-변수를-추출해-앞부분-5행을-출력해-보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q2.-연료-가격-변수가-잘-추가됐는지-확인하기-위해-modelflprice_fl-변수를-추출해-앞부분-5행을-출력해-보세요.">Q2. 연료 가격 변수가 잘 추가됐는지 확인하기 위해 <code>model</code>,<code>fl</code>,<code>price_fl</code> 변수를 추출해 앞부분 5행을 출력해 보세요.</h6>
+<div id="0869b6e3" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg[[<span class="st">'model'</span>,<span class="st">'fl'</span>,<span class="st">'price_fl'</span>]].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">model</th>
+<th data-quarto-table-cell-role="th">fl</th>
+<th data-quarto-table-cell-role="th">price_fl</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>a4</td>
+<td>p</td>
+<td>2.76</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>a4</td>
+<td>p</td>
+<td>2.76</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>a4</td>
+<td>p</td>
+<td>2.76</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>a4</td>
+<td>p</td>
+<td>2.76</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>a4</td>
+<td>p</td>
+<td>2.76</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 
 
 </section>
