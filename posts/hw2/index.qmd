@@ -1,12 +1,16 @@
 ---
-title: "hw2"
-editor: visual
-jupyter: python3
+title: "LS 빅데이터 스쿨 Homework 2"
+author: "yongraegod"
+date: "2024-07-16"
+categories: [bigdata]
 ---
+
+![](damgom2.jpg)
 
 ## 144 페이지
 
 ###### Q1. 자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 합니다. `displ`(배기량)이 4 이하인 자동차와 5 이상인 자동차 중 어떤 자동차의 `hwy`(고속도로 연비) 평균이 더 높은지 알아보세요.
+
 ```{python}
 # mpg 데이터 불러오기
 import pandas as pd
@@ -28,17 +32,19 @@ mpg_toyota = mpg.query("manufacturer == 'toyota'")
 mpg_audi['cty'].mean(), mpg_toyota['cty'].mean()
 ```
 
-###### Q3. `'chevrolet'`, `'ford'`, `'honda'` 자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를  추출한 다음 `hwy`전체 평균을 구해 보세요.
+###### Q3. `'chevrolet'`, `'ford'`, `'honda'` 자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 `hwy`전체 평균을 구해 보세요.
+
 ```{python}
 mpg_new = mpg.query('manufacturer in ["chevrolet", "ford", "honda"]')
 mpg_new['hwy'].mean()
 ```
 
----
+------------------------------------------------------------------------
 
 ## 153 페이지
 
-###### Q1. `'audi'`에서 생산한 자동차 중에 어떤 자동차 모델의 `hwy`(고속도로 연비)가 높은지 알아보려고 합니다. `audi'`에서 생산한 자동차 중 `hwy`가 1~5위에 해당하는 자동차의 데이터를 출력하세요.
+###### Q1. `'audi'`에서 생산한 자동차 중에 어떤 자동차 모델의 `hwy`(고속도로 연비)가 높은지 알아보려고 합니다. `audi'`에서 생산한 자동차 중 `hwy`가 1\~5위에 해당하는 자동차의 데이터를 출력하세요.
+
 ```{python}
 audi_mpg = mpg.query("manufacturer == 'audi'")
 audi_mpg.sort_values('hwy', ascending = False).head()
@@ -47,13 +53,15 @@ mpg.query("manufacturer == 'audi'") \
    .sort_values('hwy', ascending = False) \
    .head()
 ```
----
 
+------------------------------------------------------------------------
 
 ## 158 페이지
+
 `mpg`데이터는 연비를 나타내는 변수가 `hwy`(고속도로 연비), `cty`(도시 연비) 두 종류로 분리되어 있습니다. 두 변수는 각각 활용하는 대신 하나의 합산 연비 변수를 만들어 분석하려고 합니다.
 
 ###### Q1. `mpg`데이터 복사본을 만들고, `cty`와 `hwy`를 더한 `합산 연비 변수`를 추가하세요.
+
 ```{python}
 mpg_new = mpg.copy()
 mpg_new = mpg_new.assign(mileage = mpg_new['cty'] + mpg_new['hwy'])
@@ -63,6 +71,7 @@ mpg_new.head()
 </br>
 
 ###### Q2. 앞에서 만든 '합산 연비 변수'를 2로 나눠 '평균 연비 변수'를 추가하세요.
+
 ```{python}
 mpg_new = mpg_new.assign(mileage_mean = mpg_new['mileage'] / 2)
 mpg_new.head()
@@ -71,13 +80,15 @@ mpg_new.head()
 </br>
 
 ###### Q3. '평균 연비 변수'가 가장 높은 자동차 3종의 데이터를 출력하세요.
+
 ```{python}
 mpg_new.sort_values('mileage_mean', ascending = False).head(3)
 ```
 
 </br>
 
-###### Q4. 1~3번 문제를 해결할 수 있는 하나로 연결된 `pandas`구문을 만들어 실행해 보세요. 데이터는 복사본 대신 `mpg`원본을 이용하세요.
+###### Q4. 1\~3번 문제를 해결할 수 있는 하나로 연결된 `pandas`구문을 만들어 실행해 보세요. 데이터는 복사본 대신 `mpg`원본을 이용하세요.
+
 ```{python}
 mpg.assign(mileage = mpg_new['cty'] + mpg_new['hwy']) \
    .assign(mileage_mean = mpg_new['mileage'] / 2) \

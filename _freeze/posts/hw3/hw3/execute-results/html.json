@@ -1,0 +1,12 @@
+{
+  "hash": "5abb833377ac4277460a28bf02bf0380",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: hw3\neditor: visual\n---\n\n## 173 페이지\n\n###### Q1. `mpg`데이터에는 연료 종류를 나타낸 `fl`변수는 있지만 연료 가격을 나타낸 변수는 없습니다. 앞에서 만든 `fuel`데이터를 이용해 `mpg`데이터에 `price_fl`(연료 가격) 변수를 추가하세요.\n\n",
+    "supporting": [
+      "hw3_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

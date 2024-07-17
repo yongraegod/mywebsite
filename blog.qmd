@@ -2,7 +2,7 @@
 title: "myblog"
 listing:
   contents: posts
-  sort: "date desc"
+  sort: "date asc"
   type: default
   categories: true
 ---

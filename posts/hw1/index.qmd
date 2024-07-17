@@ -1,8 +1,11 @@
 ---
-title: "hw1"
-editor: visual
-jupyter: python3
+title: "LS 빅데이터 스쿨 Homework 1"
+author: "yongraegod"
+date: "2024-07-12"
+categories: [bigdata]
 ---
+
+![](nongdamgom1.png)
 
 ## 84 페이지
 

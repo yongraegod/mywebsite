@@ -1,13 +1,16 @@
 ---
-title: "hw3"
-editor: visual
-jupyter: python3
+title: "LS 빅데이터 스쿨 Homework 3"
+author: "yongraegod"
+date: "2024-07-17"
+categories: [bigdata]
 ---
+
+![](damgom3.jpg)
 
 ## 173 페이지
 
 ###### Q1. `mpg`데이터에는 연료 종류를 나타낸 `fl`변수는 있지만 연료 가격을 나타낸 변수는 없습니다. 앞에서 만든 `fuel`데이터를 이용해 `mpg`데이터에 `price_fl`(연료 가격) 변수를 추가하세요.
+
 ```{python}
 
 ```
-
