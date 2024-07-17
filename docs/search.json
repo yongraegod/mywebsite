@@ -199,8 +199,8 @@
     "objectID": "posts/hw2/index.html#페이지",
     "href": "posts/hw2/index.html#페이지",
     "title": "LS 빅데이터 스쿨 Homework 2",
-    "section": "",
-    "text": "# mpg 데이터 불러오기\nimport pandas as pd\nimport numpy as np\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nmpg_a = mpg.query('displ &lt;= 4')\nmpg_b = mpg.query('displ &gt;= 5')\n\nmpg_a['hwy'].mean(), mpg_b['hwy'].mean()\n\n(np.float64(25.96319018404908), np.float64(18.07894736842105))\n\n\n\n\n\n\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")\n\nmpg_audi['cty'].mean(), mpg_toyota['cty'].mean()\n\n(np.float64(17.61111111111111), np.float64(18.529411764705884))\n\n\n\n\n\n\nmpg_new = mpg.query('manufacturer in [\"chevrolet\", \"ford\", \"honda\"]')\nmpg_new['hwy'].mean()\n\nnp.float64(22.50943396226415)"
+    "section": "144 페이지",
+    "text": "144 페이지\n\nQ1. 자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 합니다. displ(배기량)이 4 이하인 자동차와 5 이상인 자동차 중 어떤 자동차의 hwy(고속도로 연비) 평균이 더 높은지 알아보세요.\n\n# mpg 데이터 불러오기\nimport pandas as pd\nimport numpy as np\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nmpg_a = mpg.query('displ &lt;= 4')\nmpg_b = mpg.query('displ &gt;= 5')\n\nmpg_a['hwy'].mean(), mpg_b['hwy'].mean()\n\n(np.float64(25.96319018404908), np.float64(18.07894736842105))\n\n\n\n\nQ2. 자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. 'audi'와 'toyota'중 어느 manufacture(자동차 제조 회사)의 cty(도시연비) 평균이 더 높은지 알아보세요.\n\nmpg_audi = mpg.query(\"manufacturer == 'audi'\")\nmpg_toyota = mpg.query(\"manufacturer == 'toyota'\")\n\nmpg_audi['cty'].mean(), mpg_toyota['cty'].mean()\n\n(np.float64(17.61111111111111), np.float64(18.529411764705884))\n\n\n\n\nQ3. 'chevrolet', 'ford', 'honda' 자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 hwy전체 평균을 구해 보세요.\n\nmpg_new = mpg.query('manufacturer in [\"chevrolet\", \"ford\", \"honda\"]')\nmpg_new['hwy'].mean()\n\nnp.float64(22.50943396226415)"
   },
   {
     "objectID": "posts/hw2/index.html#페이지-1",
