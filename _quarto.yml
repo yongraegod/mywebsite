@@ -12,6 +12,8 @@ website:
       - hw1.qmd
       - hw2.qmd
       - hw3.qmd
+      - href: blog.qmd
+        text: myblog
 
 format:
   html:
