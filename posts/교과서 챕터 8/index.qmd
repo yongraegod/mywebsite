@@ -1,8 +1,8 @@
 ---
 title: "교과서 챕터 8"
-format: html
-editor: visual
-jupyter: python3
+author: "yongraegod"
+date: "2024-07-22"
+categories: [bigdata]
 ---
 
 ![](damgom5.jpg)
@@ -68,3 +68,38 @@ df_mpg
 sns.barplot(data = df_mpg.sort_values("mean_hwy", ascending = False),
             x = 'drv', y = 'mean_hwy', hue = 'drv')
 ```
+
+---
+
+### p.318 `px.bar()`를 이용한 막대 그래프 만들기
+
+- 자동차 종류별 빈도 구하기
+
+```{python}
+df = mpg.groupby('category', as_index = False) \
+        .agg(n = ('category', 'count'))
+df
+```
+
+</br>
+
+- 막대 그래프 만들기
+```{python}
+px.bar(data_frame = df, x = 'category', y = 'n', color = 'category')
+```
+---
+
+### p.319 `px.line()`를 이용한 선 그래프 만들기
+
+- economics 불러오기
+```{python}
+economics = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/economics.csv')
+```
+
+</br>
+
+- 선 그래프 만들기
+```{python}
+px.line(data_frame = economics, x = 'date', y = 'psavert')
+```
+
