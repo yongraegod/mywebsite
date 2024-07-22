@@ -5,6 +5,8 @@ date: "2024-07-22"
 categories: [bigdata]
 ---
 
+![](damgom4.jpg)
+
 ## 204 페이지
 `mpg`데이터와 `midwest`데이터를 이용해 분석 문제를 해결해 보세요.
 
