@@ -200,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="damgom3.jpg" class="img-fluid"></p>
 <section id="페이지" class="level2">
 <h2 class="anchored" data-anchor-id="페이지">173 페이지</h2>
-<div id="4fb80124" class="cell" data-execution_count="1">
+<div id="d13ad968" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="q1.-mpg데이터에는-연료-종류를-나타낸-fl변수는-있지만-연료-가격을-나타낸-변수는-없습니다.-앞에서-만든-fuel데이터를-이용해-mpg데이터에-price_fl연료-가격-변수를-추가하세요." class="level6">
 <h6 class="anchored" data-anchor-id="q1.-mpg데이터에는-연료-종류를-나타낸-fl변수는-있지만-연료-가격을-나타낸-변수는-없습니다.-앞에서-만든-fuel데이터를-이용해-mpg데이터에-price_fl연료-가격-변수를-추가하세요.">Q1. <code>mpg</code>데이터에는 연료 종류를 나타낸 <code>fl</code>변수는 있지만 연료 가격을 나타낸 변수는 없습니다. 앞에서 만든 <code>fuel</code>데이터를 이용해 <code>mpg</code>데이터에 <code>price_fl</code>(연료 가격) 변수를 추가하세요.</h6>
-<div id="2c791ca7" class="cell" data-execution_count="2">
+<div id="b0f18fea" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.merge(mpg, fuel, how <span class="op">=</span> <span class="st">'left'</span>, on <span class="op">=</span> <span class="st">'fl'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mpg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -286,9 +286,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="q2.-연료-가격-변수가-잘-추가됐는지-확인하기-위해-modelflprice_fl-변수를-추출해-앞부분-5행을-출력해-보세요." class="level6">
 <h6 class="anchored" data-anchor-id="q2.-연료-가격-변수가-잘-추가됐는지-확인하기-위해-modelflprice_fl-변수를-추출해-앞부분-5행을-출력해-보세요.">Q2. 연료 가격 변수가 잘 추가됐는지 확인하기 위해 <code>model</code>,<code>fl</code>,<code>price_fl</code> 변수를 추출해 앞부분 5행을 출력해 보세요.</h6>
-<div id="a8a0c834" class="cell" data-execution_count="3">
+<div id="41202e6d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg[[<span class="st">'model'</span>,<span class="st">'fl'</span>,<span class="st">'price_fl'</span>]].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
