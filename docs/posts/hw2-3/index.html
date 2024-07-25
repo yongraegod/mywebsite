@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="yongraegod">
-<meta name="dcterms.date" content="2024-07-25">
+<meta name="dcterms.date" content="2024-07-22">
 
-<title>yongrae’s website - LS 빅데이터 스쿨 Homework 3</title>
+<title>yongrae’s website - LS 빅데이터 스쿨 Homework 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">LS 빅데이터 스쿨 Homework 3</h1>
+      <h1 class="title">LS 빅데이터 스쿨 Homework 4</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">bigdata</div>
               </div>
@@ -133,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 25, 2024</p>
+        <p class="date">July 22, 2024</p>
       </div>
     </div>
     
@@ -145,7 +179,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#페이지" id="toc-페이지" class="nav-link active" data-scroll-target="#페이지">204 페이지</a></li>
+  <li><a href="#페이지-1" id="toc-페이지-1" class="nav-link" data-scroll-target="#페이지-1">211 페이지</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -154,9 +195,85 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="damgom.gif" class="img-fluid"></p>
+<p><img src="damgom4.jpg" class="img-fluid"></p>
+<section id="페이지" class="level2">
+<h2 class="anchored" data-anchor-id="페이지">204 페이지</h2>
+<p><code>mpg</code>데이터와 <code>midwest</code>데이터를 이용해 분석 문제를 해결해 보세요.</p>
+<section id="q1.-mpg데이터의-cty도시-연비와-hwy고속도로-연비-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-cty-y축은-hwy로-된-산점도를-만들어-보세요." class="level6">
+<h6 class="anchored" data-anchor-id="q1.-mpg데이터의-cty도시-연비와-hwy고속도로-연비-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-cty-y축은-hwy로-된-산점도를-만들어-보세요.">Q1. <code>mpg</code>데이터의 <code>cty</code>(도시 연비)와 <code>hwy</code>(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 <code>cty</code>, y축은 <code>hwy</code>로 된 산점도를 만들어 보세요.</h6>
+<div id="334356c3" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> mpg, x<span class="op">=</span><span class="st">'cty'</span>, y<span class="op">=</span><span class="st">'hwy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="585" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="q2.-미국의-지역별-인구통계-정보를-담은-midwest.csv를-이용해-전체-인구와-아시아인-인구-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-poptotal전체-인구-y축은-popasian아시아인-인구으로-된-산점도를-만들어-보세요.-전체-인구는-50만-명-이하-아시아인-인구는-1만-명-이하인-지역만-산점도에-표시되게-설정하세요." class="level6">
+<h6 class="anchored" data-anchor-id="q2.-미국의-지역별-인구통계-정보를-담은-midwest.csv를-이용해-전체-인구와-아시아인-인구-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-poptotal전체-인구-y축은-popasian아시아인-인구으로-된-산점도를-만들어-보세요.-전체-인구는-50만-명-이하-아시아인-인구는-1만-명-이하인-지역만-산점도에-표시되게-설정하세요.">Q2. 미국의 지역별 인구통계 정보를 담은 <code>midwest.csv</code>를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 <code>poptotal</code>(전체 인구), y축은 <code>popasian</code>(아시아인 인구)으로 된 산점도를 만들어 보세요. 전체 인구는 50만 명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.</h6>
+<div id="099c4a15" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/midwest.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> df, x <span class="op">=</span> <span class="st">'poptotal'</span>, y <span class="op">=</span> <span class="st">'popasian'</span>) <span class="op">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   .<span class="bu">set</span>(xlim <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">500000</span>], ylim <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">10000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="635" height="434" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="페이지-1" class="level2">
+<h2 class="anchored" data-anchor-id="페이지-1">211 페이지</h2>
+<p><code>mpg</code>데이터를 이용해 분석 문제를 해결해 보세요.</p>
+<section id="q1.-어떤-회사에서-생산한-suv차종의-도시-연비가-높은지-알아보려고-합니다.-suv차종을-대상으로-cty도시-연비-평균이-가장-높은-회사-다섯-곳을-막대-그래프로-표현해-보세요.-막대는-연비가-가장-높은-순으로-정렬하세요." class="level6">
+<h6 class="anchored" data-anchor-id="q1.-어떤-회사에서-생산한-suv차종의-도시-연비가-높은지-알아보려고-합니다.-suv차종을-대상으로-cty도시-연비-평균이-가장-높은-회사-다섯-곳을-막대-그래프로-표현해-보세요.-막대는-연비가-가장-높은-순으로-정렬하세요.">Q1. 어떤 회사에서 생산한 <code>'suv'</code>차종의 도시 연비가 높은지 알아보려고 합니다. <code>'suv'</code>차종을 대상으로 <code>cty</code>(도시 연비) 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 가장 높은 순으로 정렬하세요.</h6>
+<div id="f7f80892" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg_suv <span class="op">=</span> mpg.query(<span class="st">'category == "suv"'</span>).groupby(<span class="st">'manufacturer'</span>, as_index <span class="op">=</span> <span class="va">True</span>) <span class="op">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       .agg(n <span class="op">=</span> (<span class="st">'cty'</span>, <span class="st">'mean'</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> mpg_suv.sort_values(<span class="st">"n"</span>, ascending <span class="op">=</span> <span class="va">False</span>).head(<span class="dv">5</span>), x <span class="op">=</span> <span class="st">'manufacturer'</span>, y <span class="op">=</span> <span class="st">'n'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-4-output-1.png" width="597" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="q2.-자동차-중에-어떤-category자동차-종류가-많은지-알아보려고-합니다.-sns.barplot을-이용해-자동차-종류별-빈도를-표현한-막대-그래프를-만들어-보세요.-막대는-빈도가-높은-순으로-정렬하세요." class="level6">
+<h6 class="anchored" data-anchor-id="q2.-자동차-중에-어떤-category자동차-종류가-많은지-알아보려고-합니다.-sns.barplot을-이용해-자동차-종류별-빈도를-표현한-막대-그래프를-만들어-보세요.-막대는-빈도가-높은-순으로-정렬하세요.">Q2. 자동차 중에 어떤 <code>category</code>(자동차 종류)가 많은지 알아보려고 합니다. <code>sns.barplot()</code>을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.</h6>
+<div id="2359ea23" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sns.countplot(data <span class="op">=</span> mpg, x <span class="op">=</span> <span class="st">'category'</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>              order <span class="op">=</span> mpg[<span class="st">'category'</span>].value_counts().index)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="585" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
