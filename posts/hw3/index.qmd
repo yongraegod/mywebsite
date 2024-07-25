@@ -29,7 +29,8 @@ def pdf(x, mu, sigma):
 ```{python}
 k = np.linspace(-7, 13)
 y = pdf(k, 3, 2)
-plt.plot(k, y, color="orchid", linewidth=4)
+plt.plot(k, y, color="orchid", linewidth=4, marker='o', markerfacecolor = 'aqua')
+plt.grid(True)
 plt.show()
 plt.clf()
 ```

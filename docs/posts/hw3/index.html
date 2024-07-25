@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><img src="damgom.gif" class="img-fluid"></p>
-<div id="14888dc7" class="cell" data-execution_count="1">
+<div id="0f438805" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -208,18 +208,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <section id="정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2의-pdf를-그려보시오." class="level2">
 <h2 class="anchored" data-anchor-id="정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2의-pdf를-그려보시오.">1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.</h2>
-<div id="4772c9d0" class="cell" data-execution_count="2">
+<div id="3e1357e2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pdf(x, mu, sigma):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (sigma <span class="op">*</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> math.pi))</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> (x <span class="op">-</span> mu) <span class="op">/</span> sigma</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> np.exp((<span class="op">-</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>) <span class="op">*</span> b<span class="op">**</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a9d34de9" class="cell" data-execution_count="3">
+<div id="37052c31" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">7</span>, <span class="dv">13</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> pdf(k, <span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.plot(k, y, color<span class="op">=</span><span class="st">"orchid"</span>, linewidth<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.plot(k, y, color<span class="op">=</span><span class="st">"orchid"</span>, linewidth<span class="op">=</span><span class="dv">4</span>, marker<span class="op">=</span><span class="st">'o'</span>, markerfacecolor <span class="op">=</span> <span class="st">'aqua'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -236,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="파이썬-scipy-패키지를-사용해서-다음과-같은-확률을-구하시오." class="level2">
 <h2 class="anchored" data-anchor-id="파이썬-scipy-패키지를-사용해서-다음과-같은-확률을-구하시오.">2. 파이썬 scipy 패키지를 사용해서 다음과 같은 확률을 구하시오.</h2>
-<div id="b1f0c01b" class="cell" data-execution_count="4">
+<div id="7dbad44d" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> bernoulli</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -248,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>P(X&lt;3)</li>
 </ol></li>
 </ul>
-<div id="0a6e1679" class="cell" data-execution_count="5">
+<div id="7db74ce3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> norm.cdf(<span class="dv">3</span>,loc<span class="op">=</span><span class="dv">2</span>,scale<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(a.<span class="bu">round</span>(<span class="dv">3</span>)) <span class="op">+</span> <span class="st">'입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -261,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>P(2&lt;X&lt;5)</li>
 </ol></li>
 </ul>
-<div id="817f9819" class="cell" data-execution_count="6">
+<div id="ddbf7e3b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> norm.cdf(<span class="dv">5</span>,loc<span class="op">=</span><span class="dv">2</span>,scale<span class="op">=</span><span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>,loc<span class="op">=</span><span class="dv">2</span>,scale<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(b.<span class="bu">round</span>(<span class="dv">3</span>)) <span class="op">+</span> <span class="st">'입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -274,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>P(X&lt;3 or X&gt;7)</li>
 </ol></li>
 </ul>
-<div id="2d67337f" class="cell" data-execution_count="7">
+<div id="f8bc680e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> (norm.cdf(<span class="dv">7</span>,loc<span class="op">=</span><span class="dv">2</span>,scale<span class="op">=</span><span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">3</span>,loc<span class="op">=</span><span class="dv">2</span>,scale<span class="op">=</span><span class="dv">3</span>))</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'확률은 '</span> <span class="op">+</span> <span class="bu">str</span>(c.<span class="bu">round</span>(<span class="dv">3</span>)) <span class="op">+</span> <span class="st">'입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -285,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ls-빅데이터스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는" class="level2">
 <h2 class="anchored" data-anchor-id="ls-빅데이터스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는">3. LS 빅데이터스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?</h2>
-<div id="45afa798" class="cell" data-execution_count="8">
+<div id="6bf36c62" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># X~N(30,2)</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> norm.ppf(<span class="fl">0.95</span>,<span class="dv">30</span>,<span class="dv">2</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'해당 학생의 점수는 '</span> <span class="op">+</span> <span class="bu">str</span>(d.<span class="bu">round</span>(<span class="dv">3</span>)) <span class="op">+</span> <span class="st">'입니다.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

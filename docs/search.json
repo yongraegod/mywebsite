@@ -130,7 +130,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/hw1.html",
@@ -333,6 +333,6 @@
     "href": "posts/hw3/index.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2의-pdf를-그려보시오.",
     "title": "LS 빅데이터 스쿨 Homework 3",
     "section": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.",
-    "text": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.\n\ndef pdf(x, mu, sigma):\n    a = 1 / (sigma * np.sqrt(2 * math.pi))\n    b = (x - mu) / sigma\n    return a * np.exp((-1/2) * b**2)\n\n\nk = np.linspace(-7, 13)\ny = pdf(k, 3, 2)\nplt.plot(k, y, color=\"orchid\", linewidth=4)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.\n\ndef pdf(x, mu, sigma):\n    a = 1 / (sigma * np.sqrt(2 * math.pi))\n    b = (x - mu) / sigma\n    return a * np.exp((-1/2) * b**2)\n\n\nk = np.linspace(-7, 13)\ny = pdf(k, 3, 2)\nplt.plot(k, y, color=\"orchid\", linewidth=4, marker='o', markerfacecolor = 'aqua')\nplt.grid(True)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   }
 ]
