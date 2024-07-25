@@ -299,5 +299,40 @@
     "title": "LS 빅데이터 스쿨 Homework 4",
     "section": "211 페이지",
     "text": "211 페이지\nmpg데이터를 이용해 분석 문제를 해결해 보세요.\n\nQ1. 어떤 회사에서 생산한 'suv'차종의 도시 연비가 높은지 알아보려고 합니다. 'suv'차종을 대상으로 cty(도시 연비) 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 가장 높은 순으로 정렬하세요.\n\nmpg_suv = mpg.query('category == \"suv\"').groupby('manufacturer', as_index = True) \\\n       .agg(n = ('cty', 'mean'))\n\nsns.barplot(data = mpg_suv.sort_values(\"n\", ascending = False).head(5), x = 'manufacturer', y = 'n')\n\n\n\n\n\n\n\n\n\n\n\nQ2. 자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.\n\nsns.countplot(data = mpg, x = 'category',\n              order = mpg['category'].value_counts().index)"
+  },
+  {
+    "objectID": "posts/hw3/index.html",
+    "href": "posts/hw3/index.html",
+    "title": "LS 빅데이터 스쿨 Homework 3",
+    "section": "",
+    "text": "import numpy as np\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nimport math"
+  },
+  {
+    "objectID": "posts/hw3/index.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu3-sigma2의-pdf를-그릴-것.",
+    "href": "posts/hw3/index.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu3-sigma2의-pdf를-그릴-것.",
+    "title": "LS 빅데이터 스쿨 Homework 3",
+    "section": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu=3, sigma=2의 pdf를 그릴 것.",
+    "text": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu=3, sigma=2의 pdf를 그릴 것.\n\ndef pdf(x, mu, sigma):\n    a = 1 / (sigma * np.sqrt(2 * math.pi))\n    b = (x - mu) / sigma\n    return a * np.exp((-1/2) * b**2)\n\n\nk = np.linspace(-7, 13)\ny = pdf(k, 3, 2)\nplt.plot(k, y, color=\"orchid\", linewidth=4)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw3/index.html#파이썬-scipy-패키지를-사용해서-다음과-같은-확률을-구하시오.",
+    "href": "posts/hw3/index.html#파이썬-scipy-패키지를-사용해서-다음과-같은-확률을-구하시오.",
+    "title": "LS 빅데이터 스쿨 Homework 3",
+    "section": "2. 파이썬 scipy 패키지를 사용해서 다음과 같은 확률을 구하시오.",
+    "text": "2. 파이썬 scipy 패키지를 사용해서 다음과 같은 확률을 구하시오.\n\nfrom scipy.stats import bernoulli\nfrom scipy.stats import binom\nfrom scipy.stats import norm\n\n\nX~N(2, 3^2)\n\n\nP(X&lt;3)\n\n\n\na = norm.cdf(3,loc=2,scale=3)\nprint('확률은 ' + str(a.round(3)) + '입니다.')\n\n확률은 0.631입니다.\n\n\n\n\n\nP(2&lt;X&lt;5)\n\n\n\nb = norm.cdf(5,loc=2,scale=3) - norm.cdf(2,loc=2,scale=3)\nprint('확률은 ' + str(b.round(3)) + '입니다.')\n\n확률은 0.341입니다.\n\n\n\n\n\nP(X&lt;3 or X&gt;7)\n\n\n\nc = 1 - (norm.cdf(7,loc=2,scale=3) - norm.cdf(3,loc=2,scale=3))\nprint('확률은 ' + str(c.round(3)) + '입니다.')\n\n확률은 0.678입니다."
+  },
+  {
+    "objectID": "posts/hw3/index.html#ls-빅데이터스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는",
+    "href": "posts/hw3/index.html#ls-빅데이터스쿨-학생들의-중간고사-점수는-평균이-30이고-분산이-4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는",
+    "title": "LS 빅데이터 스쿨 Homework 3",
+    "section": "3. LS 빅데이터스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?",
+    "text": "3. LS 빅데이터스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?\n\n# X~N(30,2)\nd = norm.ppf(0.95,30,2)\nprint('해당 학생의 점수는 ' + str(d.round(3)) + '입니다.')\n\n해당 학생의 점수는 33.29입니다."
+  },
+  {
+    "objectID": "posts/hw3/index.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2의-pdf를-그려보시오.",
+    "href": "posts/hw3/index.html#정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu-3-sigma-2의-pdf를-그려보시오.",
+    "title": "LS 빅데이터 스쿨 Homework 3",
+    "section": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.",
+    "text": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.\n\ndef pdf(x, mu, sigma):\n    a = 1 / (sigma * np.sqrt(2 * math.pi))\n    b = (x - mu) / sigma\n    return a * np.exp((-1/2) * b**2)\n\n\nk = np.linspace(-7, 13)\ny = pdf(k, 3, 2)\nplt.plot(k, y, color=\"orchid\", linewidth=4)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   }
 ]
