@@ -173,7 +173,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bigdata">bigdata <span class="quarto-category-count">(6)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="bigdata">bigdata <span class="quarto-category-count">(7)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -202,7 +202,56 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bigdata" data-listing-date-sort="1721833200000" data-listing-file-modified-sort="1721901621639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
+<div class="quarto-post image-right" data-index="0" data-categories="bigdata" data-listing-date-sort="1722178800000" data-listing-file-modified-sort="1722256621275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
+<div class="thumbnail">
+<p><a href="./posts/hw4/index.html" class="no-external"></a></p><a href="./posts/hw4/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\hw4\index_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/hw4/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/hw4/index.html" class="no-external">LS 빅데이터 스쿨 Homework 4</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/hw4/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
+bigdata
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/hw4/index.html" class="no-external">
+
+<section id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요." class="level6">
+
+<hr>
+</section>
+<section id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용" class="level4">
+
+<div id="ba8c6836" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><span class="im">from</span> scipy.stats <span class="im">import</span> uniform</span>
+<span id="cb1-6"></span>
+<span id="cb1-7"><span class="co"># X ~ U(3,7)</span></span>
+<span id="cb1-8">x<span class="op">=</span>uniform.rvs(loc<span class="op">=</span><span class="dv">3</span>, scale<span class="op">=</span><span class="dv">…</span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="dv"></span></span><span id="cb1-9"></span><span id="cb1-10"></span><span id="cb1-11"><span class="co"></span></span><span id="cb1-12"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-13"></span><span id="cb1-14"></span><span id="cb1-15"><span class="co"></span></span><span id="cb1-16"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb1-17"></span><span id="cb1-18"></span><span id="cb1-19"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div><div id="dae86135" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co"></span></span><span id="cb3-2"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb3-3"></span><span id="cb3-4"></span><span id="cb3-5"><span class="co"></span></span><span id="cb3-6"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb3-7"></span><span id="cb3-8"></span><span id="cb3-9"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section><section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level4"><div id="11cbab98" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co"></span></span><span id="cb5-2"><span class="op"></span></span><span id="cb5-3"></span><span id="cb5-4"><span class="co"></span></span><span id="cb5-5"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb5-6"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-7"></span><span id="cb5-8"></span><span id="cb5-9"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div><div id="5f560152" class="cell" data-execution_count="4"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co"></span></span><span id="cb7-2"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span></span><span id="cb7-3"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb7-4"></span><span id="cb7-5"></span><span id="cb7-6"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section><section id="결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요" class="level4"><ul><li></li><li></li><li></li></ul></section></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/hw4/index.html" class="no-external">
+<div class="listing-date">
+Jul 29, 2024
+</div>
+<div class="listing-author">
+yongraegod
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bigdata" data-listing-date-sort="1721833200000" data-listing-file-modified-sort="1721950271291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144">
 <div class="thumbnail">
 <p><a href="./posts/hw3/index.html" class="no-external"></a></p><a href="./posts/hw3/index.html" class="no-external">
 <p class="card-img-top"><img src="posts\hw3\damgom.gif"  class="thumbnail-image card-img"/></p>
@@ -235,7 +284,7 @@ yongraegod
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bigdata" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721901140237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="217">
+<div class="quarto-post image-right" data-index="2" data-categories="bigdata" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721901140237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="217">
 <div class="thumbnail">
 <p><a href="./posts/hw2-3/index.html" class="no-external"></a></p><a href="./posts/hw2-3/index.html" class="no-external">
 <p class="card-img-top"><img src="posts\hw2-3\damgom4.jpg"  class="thumbnail-image card-img"/></p>
@@ -268,7 +317,7 @@ yongraegod
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bigdata" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721645319470" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
+<div class="quarto-post image-right" data-index="3" data-categories="bigdata" data-listing-date-sort="1721574000000" data-listing-file-modified-sort="1721645319470" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
 <div class="thumbnail">
 <p><a href="./posts/교과서 챕터 8/index.html" class="no-external"></a></p><a href="./posts/교과서 챕터 8/index.html" class="no-external">
 <p class="card-img-top"><img src="posts\교과서 챕터 8\damgom5.jpg"  class="thumbnail-image card-img"/></p>
@@ -301,7 +350,7 @@ yongraegod
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="bigdata" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721901147263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
+<div class="quarto-post image-right" data-index="4" data-categories="bigdata" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721901147263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
 <div class="thumbnail">
 <p><a href="./posts/hw2-2/index.html" class="no-external"></a></p><a href="./posts/hw2-2/index.html" class="no-external">
 <p class="card-img-top"><img src="posts\hw2-2\damgom3.jpg"  class="thumbnail-image card-img"/></p>
@@ -334,7 +383,7 @@ yongraegod
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="bigdata" data-listing-date-sort="1721055600000" data-listing-file-modified-sort="1721901152485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
+<div class="quarto-post image-right" data-index="5" data-categories="bigdata" data-listing-date-sort="1721055600000" data-listing-file-modified-sort="1721901152485" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
 <div class="thumbnail">
 <p><a href="./posts/hw2-1/index.html" class="no-external"></a></p><a href="./posts/hw2-1/index.html" class="no-external">
 <p class="card-img-top"><img src="posts\hw2-1\damgom2.jpg"  class="thumbnail-image card-img"/></p>
@@ -367,7 +416,7 @@ yongraegod
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="bigdata" data-listing-date-sort="1720710000000" data-listing-file-modified-sort="1721197829925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
+<div class="quarto-post image-right" data-index="6" data-categories="bigdata" data-listing-date-sort="1720710000000" data-listing-file-modified-sort="1721197829925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270">
 <div class="thumbnail">
 <p><a href="./posts/hw1/index.html" class="no-external"></a></p><a href="./posts/hw1/index.html" class="no-external">
 <p class="card-img-top"><img src="posts\hw1\nongdamgom1.png"  class="thumbnail-image card-img"/></p>

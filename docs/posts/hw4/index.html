@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="yongraegod">
-<meta name="dcterms.date" content="2024-07-22">
+<meta name="dcterms.date" content="2024-07-29">
 
 <title>yongrae’s website - LS 빅데이터 스쿨 Homework 4</title>
 <style>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 22, 2024</p>
+        <p class="date">July 29, 2024</p>
       </div>
     </div>
     
@@ -183,8 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#페이지" id="toc-페이지" class="nav-link active" data-scroll-target="#페이지">204 페이지</a></li>
-  <li><a href="#페이지-1" id="toc-페이지-1" class="nav-link" data-scroll-target="#페이지-1">211 페이지</a></li>
+  <li><a href="#표본-분산-n-1-vs.-n" id="toc-표본-분산-n-1-vs.-n" class="nav-link active" data-scroll-target="#표본-분산-n-1-vs.-n">표본 분산 n-1 vs.&nbsp;n</a></li>
   </ul>
 </nav>
     </div>
@@ -195,81 +194,116 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><img src="damgom4.jpg" class="img-fluid"></p>
-<section id="페이지" class="level2">
-<h2 class="anchored" data-anchor-id="페이지">204 페이지</h2>
-<p><code>mpg</code>데이터와 <code>midwest</code>데이터를 이용해 분석 문제를 해결해 보세요.</p>
-<section id="q1.-mpg데이터의-cty도시-연비와-hwy고속도로-연비-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-cty-y축은-hwy로-된-산점도를-만들어-보세요." class="level6">
-<h6 class="anchored" data-anchor-id="q1.-mpg데이터의-cty도시-연비와-hwy고속도로-연비-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-cty-y축은-hwy로-된-산점도를-만들어-보세요.">Q1. <code>mpg</code>데이터의 <code>cty</code>(도시 연비)와 <code>hwy</code>(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 <code>cty</code>, y축은 <code>hwy</code>로 된 산점도를 만들어 보세요.</h6>
-<div id="227260de" class="cell" data-execution_count="1">
+<section id="표본-분산-n-1-vs.-n" class="level2">
+<h2 class="anchored" data-anchor-id="표본-분산-n-1-vs.-n">표본 분산 n-1 vs.&nbsp;n</h2>
+<section id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요." class="level6">
+<h6 class="anchored" data-anchor-id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.">표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.</h6>
+<hr>
+</section>
+<section id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용" class="level4">
+<h4 class="anchored" data-anchor-id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용">1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)</h4>
+<div id="ba8c6836" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>mpg <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> mpg, x<span class="op">=</span><span class="st">'cty'</span>, y<span class="op">=</span><span class="st">'hwy'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> uniform</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># X ~ U(3,7)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>uniform.rvs(loc<span class="op">=</span><span class="dv">3</span>, scale<span class="op">=</span><span class="dv">4</span>, size<span class="op">=</span><span class="dv">20</span><span class="op">*</span><span class="dv">10000</span>).reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">20</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>x.shape</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># s_2 정의</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>s_2 <span class="op">=</span> np.var(x, axis<span class="op">=</span><span class="dv">1</span>, ddof<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>s_2</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># s_2 그리기</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>sns.histplot(s_2, stat<span class="op">=</span><span class="st">"density"</span>, color <span class="op">=</span> <span class="st">'red'</span>, label <span class="op">=</span> <span class="st">'n-1'</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="585" height="429" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="589" height="411" class="figure-img"></p>
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
-<p><br></p>
-</section>
-<section id="q2.-미국의-지역별-인구통계-정보를-담은-midwest.csv를-이용해-전체-인구와-아시아인-인구-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-poptotal전체-인구-y축은-popasian아시아인-인구으로-된-산점도를-만들어-보세요.-전체-인구는-50만-명-이하-아시아인-인구는-1만-명-이하인-지역만-산점도에-표시되게-설정하세요." class="level6">
-<h6 class="anchored" data-anchor-id="q2.-미국의-지역별-인구통계-정보를-담은-midwest.csv를-이용해-전체-인구와-아시아인-인구-간에-어떤-관계가-있는지-알아보려고-합니다.-x축은-poptotal전체-인구-y축은-popasian아시아인-인구으로-된-산점도를-만들어-보세요.-전체-인구는-50만-명-이하-아시아인-인구는-1만-명-이하인-지역만-산점도에-표시되게-설정하세요.">Q2. 미국의 지역별 인구통계 정보를 담은 <code>midwest.csv</code>를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 <code>poptotal</code>(전체 인구), y축은 <code>popasian</code>(아시아인 인구)으로 된 산점도를 만들어 보세요. 전체 인구는 50만 명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.</h6>
-<div id="0080ebf0" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/midwest.csv'</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> df, x <span class="op">=</span> <span class="st">'poptotal'</span>, y <span class="op">=</span> <span class="st">'popasian'</span>) <span class="op">\</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   .<span class="bu">set</span>(xlim <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">500000</span>], ylim <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">10000</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="dae86135" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># k_2 정의</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>k_2 <span class="op">=</span> np.var(x, axis<span class="op">=</span><span class="dv">1</span>, ddof<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>k_2</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># k_2 그리기</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>sns.histplot(k_2, stat<span class="op">=</span><span class="st">"density"</span>, color <span class="op">=</span> <span class="st">'blue'</span>, label <span class="op">=</span> <span class="st">'n'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="635" height="434" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="589" height="416" class="figure-img"></p>
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
+</div>
 </div>
 </section>
-</section>
-<section id="페이지-1" class="level2">
-<h2 class="anchored" data-anchor-id="페이지-1">211 페이지</h2>
-<p><code>mpg</code>데이터를 이용해 분석 문제를 해결해 보세요.</p>
-<section id="q1.-어떤-회사에서-생산한-suv차종의-도시-연비가-높은지-알아보려고-합니다.-suv차종을-대상으로-cty도시-연비-평균이-가장-높은-회사-다섯-곳을-막대-그래프로-표현해-보세요.-막대는-연비가-가장-높은-순으로-정렬하세요." class="level6">
-<h6 class="anchored" data-anchor-id="q1.-어떤-회사에서-생산한-suv차종의-도시-연비가-높은지-알아보려고-합니다.-suv차종을-대상으로-cty도시-연비-평균이-가장-높은-회사-다섯-곳을-막대-그래프로-표현해-보세요.-막대는-연비가-가장-높은-순으로-정렬하세요.">Q1. 어떤 회사에서 생산한 <code>'suv'</code>차종의 도시 연비가 높은지 알아보려고 합니다. <code>'suv'</code>차종을 대상으로 <code>cty</code>(도시 연비) 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 가장 높은 순으로 정렬하세요.</h6>
-<div id="6d69fc20" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg_suv <span class="op">=</span> mpg.query(<span class="st">'category == "suv"'</span>).groupby(<span class="st">'manufacturer'</span>, as_index <span class="op">=</span> <span class="va">True</span>) <span class="op">\</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>       .agg(n <span class="op">=</span> (<span class="st">'cty'</span>, <span class="st">'mean'</span>))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> mpg_suv.sort_values(<span class="st">"n"</span>, ascending <span class="op">=</span> <span class="va">False</span>).head(<span class="dv">5</span>), x <span class="op">=</span> <span class="st">'manufacturer'</span>, y <span class="op">=</span> <span class="st">'n'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level4">
+<h4 class="anchored" data-anchor-id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.">2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</h4>
+<div id="11cbab98" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 모분산</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.var(x)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># s_2 그래프에 모분산 표시</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>sns.histplot(s_2, stat<span class="op">=</span><span class="st">"density"</span>, color <span class="op">=</span> <span class="st">'red'</span>, label <span class="op">=</span> <span class="st">'n-1'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.axvline(v, color<span class="op">=</span><span class="st">'green'</span>, linestyle <span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-4-output-1.png" width="597" height="429" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-4-output-1.png" width="589" height="411" class="figure-img"></p>
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
-<p><br></p>
-</section>
-<section id="q2.-자동차-중에-어떤-category자동차-종류가-많은지-알아보려고-합니다.-sns.barplot을-이용해-자동차-종류별-빈도를-표현한-막대-그래프를-만들어-보세요.-막대는-빈도가-높은-순으로-정렬하세요." class="level6">
-<h6 class="anchored" data-anchor-id="q2.-자동차-중에-어떤-category자동차-종류가-많은지-알아보려고-합니다.-sns.barplot을-이용해-자동차-종류별-빈도를-표현한-막대-그래프를-만들어-보세요.-막대는-빈도가-높은-순으로-정렬하세요.">Q2. 자동차 중에 어떤 <code>category</code>(자동차 종류)가 많은지 알아보려고 합니다. <code>sns.barplot()</code>을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요.</h6>
-<div id="f3a3b425" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sns.countplot(data <span class="op">=</span> mpg, x <span class="op">=</span> <span class="st">'category'</span>,</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>              order <span class="op">=</span> mpg[<span class="st">'category'</span>].value_counts().index)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="5f560152" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># k_2 그래프에 모분산 표시</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(k_2, stat<span class="op">=</span><span class="st">"density"</span>, color <span class="op">=</span> <span class="st">'blue'</span>, label <span class="op">=</span> <span class="st">'n'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.axvline(v, color<span class="op">=</span><span class="st">'green'</span>, linestyle <span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-5-output-1.png" width="585" height="429" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="589" height="416" class="figure-img"></p>
 </figure>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
+</div>
+</section>
+<section id="결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요" class="level4">
+<h4 class="anchored" data-anchor-id="결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요">3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!</h4>
+<ul>
+<li>s_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.</li>
+<li>k_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.</li>
+<li>s_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨.</li>
+</ul>
 
 
 </section>

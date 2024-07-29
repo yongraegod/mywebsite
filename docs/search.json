@@ -130,7 +130,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 Homework 4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/hw1.html",
@@ -228,7 +228,7 @@
     "href": "posts/hw4/index.html",
     "title": "LS 빅데이터 스쿨 Homework 4",
     "section": "",
-    "text": "mpg데이터와 midwest데이터를 이용해 분석 문제를 해결해 보세요.\n\n\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nmpg = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/mpg.csv')\n\nsns.scatterplot(data = mpg, x='cty', y='hwy')\n\n\n\n\n\n\n\n\n\n\n\n\n\ndf = pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/midwest.csv')\ndf\nsns.scatterplot(data = df, x = 'poptotal', y = 'popasian') \\\n   .set(xlim = [0,500000], ylim = [0,10000])"
+    "text": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n# X ~ U(3,7)\nx=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx.shape\n\n# s_2 정의\ns_2 = np.var(x, axis=1, ddof=1)\ns_2\n\n# s_2 그리기\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 정의\nk_2 = np.var(x, axis=1, ddof=0)\nk_2\n\n# k_2 그리기\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\n# 모분산\nv = np.var(x)\n\n# s_2 그래프에 모분산 표시\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 그래프에 모분산 표시\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\ns_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.\nk_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.\ns_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨."
   },
   {
     "objectID": "posts/hw4/index.html#페이지",
@@ -334,5 +334,19 @@
     "title": "LS 빅데이터 스쿨 Homework 3",
     "section": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.",
     "text": "1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2의 pdf를 그려보시오.\n\ndef pdf(x, mu, sigma):\n    a = 1 / (sigma * np.sqrt(2 * math.pi))\n    b = (x - mu) / sigma\n    return a * np.exp((-1/2) * b**2)\n\n\nk = np.linspace(-7, 13)\ny = pdf(k, 3, 2)\nplt.plot(k, y, color=\"orchid\", linewidth=4, marker='o', markerfacecolor = 'aqua')\nplt.grid(True)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw4/index.html#숙제-표본-분산-n-1-vs.-n",
+    "href": "posts/hw4/index.html#숙제-표본-분산-n-1-vs.-n",
+    "title": "LS 빅데이터 스쿨 Homework 4",
+    "section": "",
+    "text": "###표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요."
+  },
+  {
+    "objectID": "posts/hw4/index.html#표본-분산-n-1-vs.-n",
+    "href": "posts/hw4/index.html#표본-분산-n-1-vs.-n",
+    "title": "LS 빅데이터 스쿨 Homework 4",
+    "section": "",
+    "text": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n# X ~ U(3,7)\nx=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx.shape\n\n# s_2 정의\ns_2 = np.var(x, axis=1, ddof=1)\ns_2\n\n# s_2 그리기\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 정의\nk_2 = np.var(x, axis=1, ddof=0)\nk_2\n\n# k_2 그리기\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\n# 모분산\nv = np.var(x)\n\n# s_2 그래프에 모분산 표시\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 그래프에 모분산 표시\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\ns_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.\nk_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.\ns_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨."
   }
 ]

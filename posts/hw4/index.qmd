@@ -1,0 +1,75 @@
+---
+title: "LS 빅데이터 스쿨 Homework 4"
+author: "yongraegod"
+date: "2024-07-29"
+categories: [bigdata]
+---
+
+## 표본 분산 n-1 vs. n
+
+###### 표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
+
+***
+
+#### 1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import uniform
+
+# X ~ U(3,7)
+x=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
+x.shape
+
+# s_2 정의
+s_2 = np.var(x, axis=1, ddof=1)
+s_2
+
+# s_2 그리기
+sns.histplot(s_2, stat="density", color = 'red', label = 'n-1')
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+```{python}
+# k_2 정의
+k_2 = np.var(x, axis=1, ddof=0)
+k_2
+
+# k_2 그리기
+sns.histplot(k_2, stat="density", color = 'blue', label = 'n')
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+#### 2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.
+```{python}
+# 모분산
+v = np.var(x)
+
+# s_2 그래프에 모분산 표시
+sns.histplot(s_2, stat="density", color = 'red', label = 'n-1')
+plt.axvline(v, color='green', linestyle ='-', linewidth=2)
+plt.legend()
+plt.show()
+plt.clf()
+```
+```{python}
+# k_2 그래프에 모분산 표시
+sns.histplot(k_2, stat="density", color = 'blue', label = 'n')
+plt.axvline(v, color='green', linestyle ='-', linewidth=2)
+plt.legend()
+plt.show()
+plt.clf()
+```
+
+
+#### 3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
+
+- s_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.
+- k_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.
+- s_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨.
