@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "전 토리에염",
+    "title": "Hyeun-Wook Oh",
     "section": "",
-    "text": "킁킁킁\n 안녕하세요, 데이터 분석 좀 어렵네요ㅋㅋ"
+    "text": "Hyeun-Wook Oh(a.k.a. yongraegod) is a person who is interested in and studying big data analysis and statistics."
   },
   {
     "objectID": "hw1.html",
@@ -369,5 +369,12 @@
     "title": "LS 빅데이터 스쿨 Homework 4",
     "section": "3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!",
     "text": "3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!\n\ns_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.\nk_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.\ns_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Hyeun-Wook Oh",
+    "section": "Education",
+    "text": "Education\n\nKorea University (2016~2022) - German Studies, Saejong Campus (2016~2017)\n\n - Health Policy and Management, Seoul Campus (2018~2022)"
   }
 ]
