@@ -196,13 +196,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="표본-분산-n-1-vs.-n" class="level2">
 <h2 class="anchored" data-anchor-id="표본-분산-n-1-vs.-n">표본 분산 n-1 vs.&nbsp;n</h2>
-<section id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요." class="level6">
-<h6 class="anchored" data-anchor-id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.">표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.</h6>
+<section id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요." class="level4">
+<h4 class="anchored" data-anchor-id="표본-분산-계산-시-왜-n-1로-나누는지-알아보도록-하겠습니다.-균일분포-3-7에서-20개의-표본을-뽑아서-분산을-2가지-방법으로-추정해보세요.">표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.</h4>
 <hr>
 </section>
 <section id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용" class="level4">
 <h4 class="anchored" data-anchor-id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용">1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)</h4>
-<div id="ba8c6836" class="cell" data-execution_count="1">
+<div id="173219cf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -233,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
 </div>
-<div id="dae86135" class="cell" data-execution_count="2">
+<div id="6b31d803" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># k_2 정의</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>k_2 <span class="op">=</span> np.var(x, axis<span class="op">=</span><span class="dv">1</span>, ddof<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>k_2</span>
@@ -246,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="589" height="416" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="593" height="411" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -257,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level4">
 <h4 class="anchored" data-anchor-id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.">2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</h4>
-<div id="11cbab98" class="cell" data-execution_count="3">
+<div id="4f3e9521" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 모분산</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.var(x)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -278,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
 </div>
-<div id="5f560152" class="cell" data-execution_count="4">
+<div id="4c0e8eeb" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># k_2 그래프에 모분산 표시</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(k_2, stat<span class="op">=</span><span class="st">"density"</span>, color <span class="op">=</span> <span class="st">'blue'</span>, label <span class="op">=</span> <span class="st">'n'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.axvline(v, color<span class="op">=</span><span class="st">'green'</span>, linestyle <span class="op">=</span><span class="st">'-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
@@ -288,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-5-output-1.png" width="589" height="416" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="593" height="411" class="figure-img"></p>
 </figure>
 </div>
 </div>

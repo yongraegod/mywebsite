@@ -12,7 +12,7 @@ about:
         href: https://github.com/yongraegod
       - icon: blog
         text: 네이버 Blog
-        href: https://blog.naver.com/ohhyunwok
+        href: https://blog.naver.com/yongraegod
 
 ---
 
