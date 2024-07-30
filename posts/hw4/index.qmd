@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import uniform
 
-# X ~ U(3,7)
+# X ~ U(3,7)에서 20개의 표본을 추출
 x=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)
 x.shape
 
@@ -49,11 +49,11 @@ plt.clf()
 ## 2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.
 ```{python}
 # 모분산
-v = np.var(x)
+pop_var = uniform.var(loc=3, scale=4)
 
 # s_2 그래프에 모분산 표시
 sns.histplot(s_2, stat="density", color = 'red', label = 'n-1')
-plt.axvline(v, color='green', linestyle ='-', linewidth=2)
+plt.axvline(x = pop_var, color='green', linestyle ='-', linewidth=2)
 plt.legend()
 plt.show()
 plt.clf()
@@ -61,7 +61,7 @@ plt.clf()
 ```{python}
 # k_2 그래프에 모분산 표시
 sns.histplot(k_2, stat="density", color = 'blue', label = 'n')
-plt.axvline(v, color='green', linestyle ='-', linewidth=2)
+plt.axvline(x = pop_var, color='green', linestyle ='-', linewidth=2)
 plt.legend()
 plt.show()
 plt.clf()
