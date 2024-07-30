@@ -18,6 +18,147 @@ categories: [bigdata]
 ***
 
 ```{python}
+!pip install pyreadstat
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+# 데이터 불러오기
+raw_welfare = pd.read_spss('C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav')
+
+# 복사본 만들기
+welfare = raw_welfare.copy()
+welfare.shape
+welfare.info()
+
+# 변수명 바꾸기
+welfare = welfare.rename(
+    columns = {'h14_g3'     : 'sex',
+               'h14_g4'     : 'birth',
+               'h14_g10'    : 'marriage_type',
+               'h14_g11'    : 'religion',
+               'p1402_8aq1' : 'income',
+               'h14_eco9'   : 'code_job',
+               'h14_reg7'   : 'code_region'}
+)
+
+# 분석에 필요한 부분만 추출해서 저장
+welfare = welfare[['sex','birth','marriage_type','religion',
+                   'income','code_job','code_region']]
+
+# 성별 항목에 이름 부여                 
+welfare['sex'] = np.where(welfare['sex'] == 1, 'male', 'female')
+
+# 성별 월급 평균표 만들기
+sex_income = welfare.dropna(subset = 'income') \
+                    .groupby('sex', as_index = False) \
+                    .agg(mean_income = ('income', 'mean'))
+
+sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
+plt.show()
+```
+
+## 각 성별 95% 신뢰구간 계산하기
+
+</br>
+
+## 각 성별 데이터 나누기
+```{python}
+male_data = welfare.query('sex == "male"')[["sex", "income"]]
+
+female_data = welfare.query('sex == "female"')[["sex", "income"]]
+
+print(male_data)
+print(female_data)
+```
+
+## 각 성별 평균 구하기
+```{python}
+male_mean   = male_data['income'].mean()
+female_mean = female_data['income'].mean()
+
+print("남성의 평균은", male_mean)
+print("여성의 평균은", female_mean)
+```
+
+## 각 성별 표본분산 구하기
+```{python}
+male_s_2 = np.var(male_data['income'], ddof = 1)
+female_s_2 = np.var(female_data['income'], ddof = 1)
+
+print("남성의 표본분산은", male_s_2)
+print("여성의 표본분산은", female_s_2)
+```
+
+## 각 성별 표준편차 구하기
+```{python}
+male_scale = np.sqrt(male_s_2)
+female_scale = np.sqrt(female_s_2)
+
+
+print("남성의 표준편차는", male_scale)
+print("여성의 표준편차는", female_scale)
+```
+
+## 각 성별 표본수 구하기
+```{python}
+male_n = male_data['income'].count()
+female_n = female_data['income'].count()
+
+print("남성의 표본수는", male_n)
+print("여성의 표본수는", female_n)
+```
+
+
+## 각 성별 신뢰구간 95% 구하기
+```{python}
+from scipy.stats import norm
+
+male_0025 = norm.ppf(0.025, loc = male_mean, scale = male_scale)
+male_0975 = norm.ppf(0.975, loc = male_mean, scale = male_scale)
+
+female_0025 = norm.ppf(0.025, loc = female_mean, scale = female_scale)
+female_0975 = norm.ppf(0.975, loc = female_mean, scale = female_scale)
+
+print("남성의 신뢰구간은 (", male_0025, ",", male_0975, ")")
+print("여성의 신뢰구간은 (", female_0025, ",", female_0975, ")")
+```
+
+
+## 각 성별 신뢰구간 95% 구하기 2
+```{python}
+z=norm.ppf(0.975,loc=0,scale=1)
+
+male_a = male_mean + z * male_scale / np.sqrt(male_n)
+male_b = male_mean - z * male_scale / np.sqrt(male_n)
+
+female_a = female_mean + z * female_scale / np.sqrt(female_n)
+female_b = female_mean - z * female_scale / np.sqrt(female_n)
+
+print("남성의 신뢰구간은 (", male_b, ",", male_a, ")")
+print("여성의 신뢰구간은 (", female_b, ",", female_a, ")")
+```
+
+## 그래프 그리기
+```{python}
+sex_income = welfare.dropna(subset = 'income') \
+                    .groupby('sex', as_index = False) \
+                    .agg(mean_income = ('income', 'mean'))
+
+sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
+
+# 남성 그래프
+plt.axhline(y = male_a, color = "black", linestyle = '-', linewidth = 2)
+plt.axhline(y = male_b, color = "black", linestyle = '-', linewidth = 2)
+plt.plot([1,1], [male_b, male_a], color = "black")
+
+# 여성 그래프
+plt.axhline(y = female_a, color = "black", linestyle = '-', linewidth = 2)
+plt.axhline(y = female_b, color = "black", linestyle = '-', linewidth = 2)
+plt.plot([0,0], [female_b, female_a], color = "black")
+
+plt.show()
+plt.clf()
 ```
 
