@@ -73,3 +73,23 @@ plt.clf()
 - s_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.
 - k_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.
 - s_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨.
+
+***
+
+## 어떤 것이 이론적인 값에 더 가까울까?
+```{python}
+# 10,000개의 분산값을 각각 비교해서 이론적인 분산에 더 가까우면 그 방법에 1점을 주는 반복문.
+
+result = []
+for i in range(10000):
+    if (s_2[i] - pop_var)**2 < (k_2[i] - pop_var)**2:
+        result.append("n-1")
+    elif (s_2[i] - pop_var)**2 > (k_2[i] - pop_var)**2:
+        result.append("n")
+        
+        
+sns.countplot(data = result)
+plt.show()
+plt.clf()
+```
+
