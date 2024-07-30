@@ -5,7 +5,7 @@ toc: false
 about:
     id: hero-heading
     template: jolla
-    image: img/profile.jpg
+    image: img/tory.jpg
     links: 
       - icon: github
         text: My GitHub
