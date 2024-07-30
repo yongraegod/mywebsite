@@ -49,19 +49,9 @@ welfare = welfare[['sex','birth','marriage_type','religion',
 
 # 성별 항목에 이름 부여                 
 welfare['sex'] = np.where(welfare['sex'] == 1, 'male', 'female')
-
-# 성별 월급 평균표 만들기
-sex_income = welfare.dropna(subset = 'income') \
-                    .groupby('sex', as_index = False) \
-                    .agg(mean_income = ('income', 'mean'))
-
-sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
-plt.show()
 ```
 
-## 각 성별 95% 신뢰구간 계산하기
-
-</br>
+***
 
 ## 각 성별 데이터 나누기
 ```{python}
@@ -75,7 +65,7 @@ print(female_data)
 
 ## 각 성별 평균 구하기
 ```{python}
-male_mean   = male_data['income'].mean()
+male_mean = male_data['income'].mean()
 female_mean = female_data['income'].mean()
 
 print("남성의 평균은", male_mean)
@@ -110,25 +100,10 @@ print("남성의 표본수는", male_n)
 print("여성의 표본수는", female_n)
 ```
 
-
 ## 각 성별 신뢰구간 95% 구하기
 ```{python}
 from scipy.stats import norm
-
-male_0025 = norm.ppf(0.025, loc = male_mean, scale = male_scale)
-male_0975 = norm.ppf(0.975, loc = male_mean, scale = male_scale)
-
-female_0025 = norm.ppf(0.025, loc = female_mean, scale = female_scale)
-female_0975 = norm.ppf(0.975, loc = female_mean, scale = female_scale)
-
-print("남성의 신뢰구간은 (", male_0025, ",", male_0975, ")")
-print("여성의 신뢰구간은 (", female_0025, ",", female_0975, ")")
-```
-
-
-## 각 성별 신뢰구간 95% 구하기 2
-```{python}
-z=norm.ppf(0.975,loc=0,scale=1)
+z = norm.ppf(0.975,loc=0,scale=1)
 
 male_a = male_mean + z * male_scale / np.sqrt(male_n)
 male_b = male_mean - z * male_scale / np.sqrt(male_n)
@@ -161,4 +136,3 @@ plt.plot([0,0], [female_b, female_a], color = "black")
 plt.show()
 plt.clf()
 ```
-
