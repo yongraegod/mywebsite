@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Hyeun-Wook Oh",
     "section": "",
-    "text": "Hyeun-Wook Oh(a.k.a. yongraegod) is a person who is interested in and studying big data analysis and statistics."
+    "text": "Hyeun-Wook Oh(a.k.a. yongraegod) is a person who is interested in studying Big data analysis and National health insurance service."
   },
   {
     "objectID": "hw1.html",
@@ -130,7 +130,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 Homework 4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
+    "text": "LS 빅데이터 스쿨 Homework 5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/hw1.html",
@@ -346,22 +346,22 @@
     "objectID": "posts/hw4/index.html#표본-분산-n-1-vs.-n",
     "href": "posts/hw4/index.html#표본-분산-n-1-vs.-n",
     "title": "LS 빅데이터 스쿨 Homework 4",
-    "section": "",
-    "text": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n# X ~ U(3,7)\nx=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx.shape\n\n# s_2 정의\ns_2 = np.var(x, axis=1, ddof=1)\ns_2\n\n# s_2 그리기\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 정의\nk_2 = np.var(x, axis=1, ddof=0)\nk_2\n\n# k_2 그리기\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\n# 모분산\nv = np.var(x)\n\n# s_2 그래프에 모분산 표시\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 그래프에 모분산 표시\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n\n\n\ns_2에 중앙이 모분산 막대에 더 가깝게 위치하고 있음.\nk_2의 분산은 모분산보다 왼쪽으로 치우쳐 있음.\ns_2(n-1로 나누는 것)가 보다 정확한 분산 추정자료라고 생각됨."
+    "section": "표본 분산 n-1 vs. n",
+    "text": "표본 분산 n-1 vs. n\n\n표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요."
   },
   {
     "objectID": "posts/hw4/index.html#n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용",
     "href": "posts/hw4/index.html#n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요-10000개-사용",
     "title": "LS 빅데이터 스쿨 Homework 4",
     "section": "1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)",
-    "text": "1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n# X ~ U(3,7)\nx=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx.shape\n\n# s_2 정의\ns_2 = np.var(x, axis=1, ddof=1)\ns_2\n\n# s_2 그리기\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 정의\nk_2 = np.var(x, axis=1, ddof=0)\nk_2\n\n# k_2 그리기\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import uniform\n\n# X ~ U(3,7)에서 20개의 표본을 추출\nx=uniform.rvs(loc=3, scale=4, size=20*10000).reshape(-1,20)\nx.shape\n\n# s_2 정의\ns_2 = np.var(x, axis=1, ddof=1)\ns_2\n\n# s_2 그리기\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 정의\nk_2 = np.var(x, axis=1, ddof=0)\nk_2\n\n# k_2 그리기\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw4/index.html#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.",
     "href": "posts/hw4/index.html#각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요.",
     "title": "LS 빅데이터 스쿨 Homework 4",
     "section": "2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.",
-    "text": "2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.\n\n# 모분산\nv = np.var(x)\n\n# s_2 그래프에 모분산 표시\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 그래프에 모분산 표시\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.axvline(v, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.\n\n# 모분산\npop_var = uniform.var(loc=3, scale=4)\n\n# s_2 그래프에 모분산 표시\nsns.histplot(s_2, stat=\"density\", color = 'red', label = 'n-1')\nplt.axvline(x = pop_var, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\n# k_2 그래프에 모분산 표시\nsns.histplot(k_2, stat=\"density\", color = 'blue', label = 'n')\nplt.axvline(x = pop_var, color='green', linestyle ='-', linewidth=2)\nplt.legend()\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/hw4/index.html#결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요",
@@ -376,5 +376,33 @@
     "title": "Hyeun-Wook Oh",
     "section": "Education",
     "text": "Education\n\nKorea University (2016~2022) - German Studies, Saejong Campus (2016~2017)\n\n - Health Policy and Management, Seoul Campus (2018~2022)"
+  },
+  {
+    "objectID": "posts/hw4/index.html#어떤-것이-이론적인-값에-더-가까울까-일준님-자료-참고",
+    "href": "posts/hw4/index.html#어떤-것이-이론적인-값에-더-가까울까-일준님-자료-참고",
+    "title": "LS 빅데이터 스쿨 Homework 4",
+    "section": "어떤 것이 이론적인 값에 더 가까울까? (일준님 자료 참고)",
+    "text": "어떤 것이 이론적인 값에 더 가까울까? (일준님 자료 참고)\n\n# 10,000개의 분산값을 각각 비교해서 이론적인 분산에 더 가까우면 그 방법에 1점을 주는 반복문.\n\nresult = []\nfor i in range(10000):\n    if (s_2[i] - pop_var)**2 &lt; (k_2[i] - pop_var)**2:\n        result.append(\"n-1\")\n    elif (s_2[i] - pop_var)**2 &gt; (k_2[i] - pop_var)**2:\n        result.append(\"n\")\n        \n        \nsns.countplot(data = result)\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "index.html#전-토리에욤",
+    "href": "index.html#전-토리에욤",
+    "title": "Hyeun-Wook Oh",
+    "section": "",
+    "text": "Hyeun-Wook Oh(a.k.a. yongraegod) is a person who is interested in studying Big data analysis and National health insurance service."
+  },
+  {
+    "objectID": "posts/hw5/index.html#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기.-norm.ppf-사용해서-그릴-것.-모분산은-표본-분산을-사용해서-추정.-위-아래-수직-막대기로-표시-아래-그림-참조",
+    "href": "posts/hw5/index.html#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기.-norm.ppf-사용해서-그릴-것.-모분산은-표본-분산을-사용해서-추정.-위-아래-수직-막대기로-표시-아래-그림-참조",
+    "title": "LS 빅데이터 스쿨 Homework 5",
+    "section": "챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기. norm.ppf() 사용해서 그릴 것. 모분산은 표본 분산을 사용해서 추정. 위 아래 수직 막대기로 표시 (아래 그림 참조)",
+    "text": "챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기. norm.ppf() 사용해서 그릴 것. 모분산은 표본 분산을 사용해서 추정. 위 아래 수직 막대기로 표시 (아래 그림 참조)"
+  },
+  {
+    "objectID": "posts/hw5/index.html#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기.",
+    "href": "posts/hw5/index.html#챕터-9-2-설문조사-그래프에서-각-성별-95-신뢰구간-계산후-그리기.",
+    "title": "LS 빅데이터 스쿨 Homework 5",
+    "section": "챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기.",
+    "text": "챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기.\n\nnorm.ppf() 사용해서 그릴 것.\n모분산은 표본 분산을 사용해서 추정.\n위 아래 수직 막대기로 표시 (아래 그림 참조)"
   }
 ]

@@ -4,6 +4,7 @@ author: "yongraegod"
 date: "2024-07-29"
 categories: [bigdata]
 ---
+![](damgom4.jpg)
 
 ## 표본 분산 n-1 vs. n
 

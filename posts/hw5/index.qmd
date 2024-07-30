@@ -1,0 +1,23 @@
+---
+title: "LS 빅데이터 스쿨 Homework 5"
+author: "yongraegod"
+date: "2024-07-30"
+categories: [bigdata]
+---
+
+![](damgom5.jpg)
+
+
+## 챕터 9-2 설문조사 그래프에서 각 성별 95% 신뢰구간 계산후 그리기.
+- norm.ppf() 사용해서 그릴 것.
+- 모분산은 표본 분산을 사용해서 추정.
+- 위 아래 수직 막대기로 표시 (아래 그림 참조)
+
+![](graph.png)
+
+***
+
+```{python}
+
+```
+
