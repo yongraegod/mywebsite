@@ -105,14 +105,14 @@ print("여성의 표본수는", female_n)
 from scipy.stats import norm
 z = norm.ppf(0.975,loc=0,scale=1)
 
-male_a = male_mean + z * male_scale / np.sqrt(male_n)
-male_b = male_mean - z * male_scale / np.sqrt(male_n)
+male_0975 = male_mean + z * male_scale / np.sqrt(male_n)
+male_0025 = male_mean - z * male_scale / np.sqrt(male_n)
 
-female_a = female_mean + z * female_scale / np.sqrt(female_n)
-female_b = female_mean - z * female_scale / np.sqrt(female_n)
+female_0975 = female_mean + z * female_scale / np.sqrt(female_n)
+female_0025 = female_mean - z * female_scale / np.sqrt(female_n)
 
-print("남성의 신뢰구간은 (", male_b, ",", male_a, ")")
-print("여성의 신뢰구간은 (", female_b, ",", female_a, ")")
+print("남성의 신뢰구간은 (", male_0025, ",", male_0975, ")")
+print("여성의 신뢰구간은 (", female_0025, ",", female_0975, ")")
 ```
 
 ## 그래프 그리기
@@ -124,14 +124,18 @@ sex_income = welfare.dropna(subset = 'income') \
 sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
 
 # 남성 그래프
-plt.axhline(y = male_a, color = "black", linestyle = '-', linewidth = 2)
-plt.axhline(y = male_b, color = "black", linestyle = '-', linewidth = 2)
-plt.plot([1,1], [male_b, male_a], color = "black")
+# plt.axhline(y = male_0975, color = "red", linestyle = '--', linewidth = 0.5)
+# plt.axhline(y = male_0025, color = "red", linestyle = '--', linewidth = 0.5)
+plt.plot([1,1], [male_0025, male_0975], color = "black")
+plt.plot([0.9,1.1], [male_0025, male_0025], color = "black", linestyle = '-')
+plt.plot([0.9,1.1], [male_0975, male_0975], color = "black", linestyle = '-')
 
 # 여성 그래프
-plt.axhline(y = female_a, color = "black", linestyle = '-', linewidth = 2)
-plt.axhline(y = female_b, color = "black", linestyle = '-', linewidth = 2)
-plt.plot([0,0], [female_b, female_a], color = "black")
+# plt.axhline(y = female_0975, color = "red", linestyle = '--', linewidth = 0.5)
+# plt.axhline(y = female_0025, color = "red", linestyle = '--', linewidth = 0.5)
+plt.plot([0,0], [female_0025, female_0975], color = "black")
+plt.plot([-0.1,0.1], [female_0025, female_0025], color = "black", linestyle = '-')
+plt.plot([-0.1,0.1], [female_0975, female_0975], color = "black", linestyle = '-')
 
 plt.show()
 plt.clf()
