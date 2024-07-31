@@ -126,16 +126,16 @@ sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
 # 남성 그래프
 # plt.axhline(y = male_0975, color = "red", linestyle = '--', linewidth = 0.5)
 # plt.axhline(y = male_0025, color = "red", linestyle = '--', linewidth = 0.5)
-plt.plot([1,1], [male_0025, male_0975], color = "black")
-plt.plot([0.9,1.1], [male_0025, male_0025], color = "black", linestyle = '-')
-plt.plot([0.9,1.1], [male_0975, male_0975], color = "black", linestyle = '-')
+plt.plot([1,1], [male_0025, male_0975], color = "red", linestyle = '-')
+plt.plot([0.9,1.1], [male_0025, male_0025], color = "red", linestyle = '--')
+plt.plot([0.9,1.1], [male_0975, male_0975], color = "red", linestyle = '--')
 
 # 여성 그래프
 # plt.axhline(y = female_0975, color = "red", linestyle = '--', linewidth = 0.5)
 # plt.axhline(y = female_0025, color = "red", linestyle = '--', linewidth = 0.5)
-plt.plot([0,0], [female_0025, female_0975], color = "black")
-plt.plot([-0.1,0.1], [female_0025, female_0025], color = "black", linestyle = '-')
-plt.plot([-0.1,0.1], [female_0975, female_0975], color = "black", linestyle = '-')
+plt.plot([0,0], [female_0025, female_0975], color = "red", linestyle = '-')
+plt.plot([-0.1,0.1], [female_0025, female_0025], color = "red", linestyle = '--')
+plt.plot([-0.1,0.1], [female_0975, female_0975], color = "red", linestyle = '--')
 
 plt.show()
 plt.clf()
