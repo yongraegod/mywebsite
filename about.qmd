@@ -1,10 +1,6 @@
 ---
-title: "About"
+title: "About Me"
 jupyter: python3
 ---
 
-About this site
-
-```{python}
-1 + 1 #은 귀요미
-```
+![](img/포트폴리오_오현욱.jpg)
