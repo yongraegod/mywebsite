@@ -7,6 +7,7 @@ project:
 website:
   page-navigation: true
   title: "yongrae's website"
+  site-url: "https://yongraegod.com"
   navbar:
     left:
       - href: index.qmd
