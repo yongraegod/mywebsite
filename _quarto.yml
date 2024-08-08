@@ -6,7 +6,7 @@ project:
 
 website:
   page-navigation: true
-  title: "yongrae's quarto"
+  title: "yongrae's website"
   navbar:
     left:
       - href: index.qmd
