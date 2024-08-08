@@ -8,25 +8,42 @@ about:
     image: img/tory.jpg
     links: 
       - icon: github
-        text: My GitHub
+        text: GitHub
         href: https://github.com/yongraegod
       - icon: blog
         text: 네이버 Blog
         href: https://blog.naver.com/yongraegod
+      - icon: instagram
+        text: Instagram
+        href: https://www.instagram.com/5_hyunwook
+      - icon: envelope
+        text: Email
+        href: mailto:ohhyunwok@naver.com
 
 ---
-## 전 토리에욤~♫ ♬
 
+<style>
+/* styles.css */
+#hero-heading {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+</style>
+
+:::{#hero-heading}
+
+## 전 토리에욤~♫ ♬
 
 Hyeun-Wook Oh(a.k.a. yongraegod) is a person who is interested in studying Big data analysis and National health insurance service.
 
-</br>
-
-***
-
-</br>
-
 :::
+
+</br>
+
   
 <div id="disqus_thread"></div>
 <script>
