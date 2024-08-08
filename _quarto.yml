@@ -1,8 +1,11 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 4200
 
 website:
+  page-navigation: true
   title: "yongrae's quarto"
   navbar:
     left:

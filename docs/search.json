@@ -130,7 +130,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "LS 빅데이터 스쿨 Homework 6\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nAug 5, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 30, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 29, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 25, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nyongraegod\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nyongraegod\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 6\n\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 5\n\n\n\nJul 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\nJul 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/hw1.html",
@@ -523,5 +523,12 @@
     "title": "LS 빅데이터 스쿨 Homework 6",
     "section": "검정통계량을 계산하시오.",
     "text": "검정통계량을 계산하시오.\n\nimport matplotlib.pyplot as plt\nimport numpy as np \nfrom scipy.stats import t \nfrom scipy.stats import norm\nfrom scipy import stats\n\n\n# 데이터\nx = np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\n\n# 표본 크기\nn = len(x)\n\n# 표본 평균\nx_bar = np.mean(x)\n\n# 표본 표준편차\nx_std = np.std(x, ddof = 1)\n\n# t값 찾기: (X_bar - 𝜇0) / (s / sqrt(n))\nt_stat = (x_bar - 16) / (x_std / np.sqrt(n))\n\nprint(\"표본 크기는\", n)\nprint(\"표본 평균은\", round(x_bar, 3))\nprint(\"표본 표준편차는\", round(x_std, 3))\nprint(\"t 값은\", round(t_stat, 3))\n\n표본 크기는 15\n표본 평균은 15.532\n표본 표준편차는 0.98\nt 값은 -1.85"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Recent posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 6\n\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 5\n\n\n\nJul 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\nJul 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

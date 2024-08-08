@@ -12,5 +12,19 @@
       "/posts/hw2-1/index.html",
       "/posts/hw1/index.html"
     ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/hw6/index.html",
+      "/posts/hw5/index.html",
+      "/posts/hw4/index.html",
+      "/posts/hw3/index.html",
+      "/posts/hw2-3/index.html",
+      "/posts/교과서 챕터 8/index.html",
+      "/posts/hw2-2/index.html",
+      "/posts/hw2-1/index.html",
+      "/posts/hw1/index.html"
+    ]
   }
 ]
