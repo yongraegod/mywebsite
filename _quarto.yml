@@ -8,7 +8,7 @@ website:
   page-navigation: true
   title: "yongrae's quarto"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - href: about.qmd
