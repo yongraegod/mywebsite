@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: _site-advanced
   preview:
     port: 4200
 
@@ -9,7 +9,7 @@ website:
   title: "yongrae's website"
   site-url: "https://yongraegod.com"
   navbar:
-    right:
+    left:
       - href: index.qmd
         text: Home
       - href: about.qmd
@@ -23,5 +23,6 @@ format:
     # css: styles.css
     toc: True
 
+quarto render --profile basic,advanced
 
 
