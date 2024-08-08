@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-jupyter: python3 
+jupyter: python3
 ---
 
 ![](img/포트폴리오_오현욱.jpg)
