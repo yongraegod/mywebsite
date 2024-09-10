@@ -5,7 +5,7 @@ date: "2024-09-02"
 categories: [bigdata]
 ---
 
-## ADP 교재 p.37\~38 문제
+## ADP 교재 p.37~38 문제
 
 ## ADP 표본점수
 
