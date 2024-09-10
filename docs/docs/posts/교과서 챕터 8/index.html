@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요." class="level2">
 <h2 class="anchored" data-anchor-id="문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.">문제 1. 데이터를 로드하고, 로지스틱 회귀모델을 적합하고, 회귀 표를 작성하세요.</h2>
-<div id="993a63de" class="cell" data-execution_count="1">
+<div id="5331c994" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -232,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 데이터 로드</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"C:/Users/USER/Documents/LS빅데이터스쿨/mywebsite/posts/로지스틱 회귀분석 문제세트/leukemia_remission.txt"</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="29">
+<div class="cell-output cell-output-display" data-execution_count="47">
 <div>
 
 
@@ -306,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="4888e6aa" class="cell" data-execution_count="2">
+<div id="c578917d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 로지스틱 회귀모델 적합</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -323,7 +323,7 @@ Dep. Variable:                 REMISS   No. Observations:                   27
 Model:                          Logit   Df Residuals:                       20
 Method:                           MLE   Df Model:                            6
 Date:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718
-Time:                        10:27:22   Log-Likelihood:                -10.797
+Time:                        10:29:21   Log-Likelihood:                -10.797
 converged:                       True   LL-Null:                       -17.186
 Covariance Type:            nonrobust   LLR p-value:                   0.04670
 ==============================================================================
@@ -364,7 +364,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <blockquote class="blockquote">
 <p>CELL (골수의 세포성): 65% <br> SMEAR (골수편의 백혈구 비율): 45% <br> INFIL (골수의 백혈병 세포 침투 비율): 55% <br> LI (골수 백혈병 세포의 라벨링 인덱스): 1.2 <br> BLAST (말초혈액의 백혈병 세포 수): 1.1세포/μL <br> TEMP (치료 시작 전 최고 체온): 0.9</p>
 </blockquote>
-<div id="7b843abb" class="cell" data-execution_count="3">
+<div id="12a1fd7a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># odds = exp(64.2581 + 30.8301 * x1 +  24.6863 * x2 -24.9745 * x3 + 4.3605 * x4 -0.0115 * x5 -100.1734 * x6)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -377,7 +377,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 </section>
 <section id="문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요" class="level2">
 <h2 class="anchored" data-anchor-id="문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요">문제 5. 위 환자의 혈액에서 백혈병 세포가 관측되지 않은 확률은 얼마인가요?</h2>
-<div id="d645935b" class="cell" data-execution_count="4">
+<div id="919e9ed4" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p_hat <span class="op">=</span> my_odds <span class="op">/</span> (my_odds <span class="op">+</span> <span class="dv">1</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p_hat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -387,7 +387,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 </section>
 <section id="문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오." class="level2">
 <h2 class="anchored" data-anchor-id="문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.">문제 6. TEMP 변수의 계수는 얼마이며, 해당 계수를 사용해서 TEMP 변수가 백혈병 치료에 대한 영향을 설명하시오.</h2>
-<div id="eff0cdad" class="cell" data-execution_count="5">
+<div id="11faaea8" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TEMP 변수의 계수</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>temp_coef <span class="op">=</span> <span class="op">-</span><span class="fl">100.1734</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -404,7 +404,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 </section>
 <section id="문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오." class="level2">
 <h2 class="anchored" data-anchor-id="문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.">문제 7. CELL 변수의 99% 오즈비에 대한 신뢰구간을 구하시오.</h2>
-<div id="8f1e2451" class="cell" data-execution_count="6">
+<div id="a0b2a4be" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CELL 변수의 계수와 표준 오차</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>cell_coef <span class="op">=</span> <span class="fl">30.8301</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>cell_std_err <span class="op">=</span> <span class="fl">52.135</span></span>
@@ -434,7 +434,7 @@ Upper bound (99% CI): 5.141881884993857e+71</code></pre>
 </section>
 <section id="문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오." class="level2">
 <h2 class="anchored" data-anchor-id="문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.">문제 8. 주어진 데이터에 대하여 로지스틱 회귀 모델의 예측 확률을 구한 후, 50% 이상인 경우 1로 처리하여, 혼동 행렬를 구하시오.</h2>
-<div id="eaea5a15" class="cell" data-execution_count="7">
+<div id="bba41469" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix, accuracy_score, precision_score, recall_score, f1_score</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 예측 확률 구하기</span></span>
@@ -460,7 +460,7 @@ Upper bound (99% CI): 5.141881884993857e+71</code></pre>
 </section>
 <section id="문제-9.-해당-모델의-accuracy는-얼마인가요" class="level2">
 <h2 class="anchored" data-anchor-id="문제-9.-해당-모델의-accuracy는-얼마인가요">문제 9. 해당 모델의 Accuracy는 얼마인가요?</h2>
-<div id="efe78208" class="cell" data-execution_count="8">
+<div id="e69797bb" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accuracy 계산</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(actual_classes, predicted_classes)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"모델의 Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -471,13 +471,34 @@ Upper bound (99% CI): 5.141881884993857e+71</code></pre>
 </section>
 <section id="문제-10.-해당-모델의-f1-score를-구하세요." class="level2">
 <h2 class="anchored" data-anchor-id="문제-10.-해당-모델의-f1-score를-구하세요.">문제 10. 해당 모델의 F1 Score를 구하세요.</h2>
-<div id="77827e9e" class="cell" data-execution_count="9">
+<div id="23ed5926" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>f1 <span class="op">=</span> f1_score(actual_classes, predicted_classes)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"모델의 F1 Score: </span><span class="sc">{</span>f1<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>모델의 F1 Score: 0.5882352941176471</code></pre>
 </div>
 </div>
+<hr>
+<p><br></p>
+<div id="disqus_thread">
+
+</div>
+<script>
+var disqus_config = function () {
+    this.page.url = window.location.href;  // 현재 페이지 URL
+    this.page.identifier = window.location.pathname; // 페이지 고유 식별자
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yongraegod.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>
+Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
 </section>

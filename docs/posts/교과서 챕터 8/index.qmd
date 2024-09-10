@@ -172,4 +172,23 @@ f1 = f1_score(actual_classes, predicted_classes)
 print(f"모델의 F1 Score: {f1}")
 ```
 
+---
 
+</br>
+
+  
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = window.location.href;  // 현재 페이지 URL
+    this.page.identifier = window.location.pathname; // 페이지 고유 식별자
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yongraegod.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
