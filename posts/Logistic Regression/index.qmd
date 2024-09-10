@@ -39,7 +39,7 @@ parent_dir = os.path.dirname(cwd)
 os.chdir(parent_dir)
 
 # 데이터 로드
-df = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/mywebsite/posts/로지스틱 회귀분석 문제세트/leukemia_remission.txt", sep='\t')
+df = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/mywebsite/posts/Logistic Regression/leukemia_remission.txt", sep='\t')
 df.head()
 ```
 
