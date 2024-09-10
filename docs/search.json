@@ -130,7 +130,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 7\n\n\n\nSep 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 6\n\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 5\n\n\n\nJul 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\nJul 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n로지스틱 회귀분석 문제세트\n\n\n\nSep 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 7\n\n\n\nSep 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 6\n\n\n\nAug 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 5\n\n\n\nJul 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 4\n\n\n\nJul 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 3\n\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-3\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n교과서 챕터 8\n\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-2\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 2-1\n\n\n\nJul 16, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLS 빅데이터 스쿨 Homework 1\n\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw1/hw1.html",
@@ -646,6 +646,90 @@
   {
     "objectID": "docs/posts/교과서 챕터 8/index.html#문제-10.-해당-모델의-f1-score를-구하세요.",
     "href": "docs/posts/교과서 챕터 8/index.html#문제-10.-해당-모델의-f1-score를-구하세요.",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 10. 해당 모델의 F1 Score를 구하세요.",
+    "text": "문제 10. 해당 모델의 F1 Score를 구하세요.\n\nf1 = f1_score(actual_classes, predicted_classes)\nprint(f\"모델의 F1 Score: {f1}\")\n\n모델의 F1 Score: 0.5882352941176471\n\n\n\n\n\n\n\n\n\nPlease enable JavaScript to view the comments powered by Disqus."
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "",
+    "text": "종속변수:  백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n\n\n\n\n독립변수:  골수의 세포성 (CELL)  골수편의 백혈구 비율 (SMEAR)  골수의 백혈병 세포 침투 비율 (INFIL)  골수 백혈병 세포의 라벨링 인덱스 (LI)  말초혈액의 백혈병 세포 수 (BLAST)  치료 시작 전 최고 체온 (TEMP)"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#로지스틱-회귀분석-문제세트",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#로지스틱-회귀분석-문제세트",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "",
+    "text": "종속변수:  백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n\n\n\n\n독립변수:  골수의 세포성 (CELL)  골수편의 백혈구 비율 (SMEAR)  골수의 백혈병 세포 침투 비율 (INFIL)  골수 백혈병 세포의 라벨링 인덱스 (LI)  말초혈액의 백혈병 세포 수 (BLAST)  치료 시작 전 최고 체온 (TEMP)"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-1.-데이터를-로드하고-로지스틱-회귀모델을-적합하고-회귀-표를-작성하세요.",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 1. 데이터를 로드하고, 로지스틱 회귀모델을 적합하고, 회귀 표를 작성하세요.",
+    "text": "문제 1. 데이터를 로드하고, 로지스틱 회귀모델을 적합하고, 회귀 표를 작성하세요.\n\nimport pandas as pd\n\nimport os\ncwd = os.getcwd()\nparent_dir = os.path.dirname(cwd)\nos.chdir(parent_dir)\n\n# 데이터 로드\ndf = pd.read_csv(\"C:/Users/USER/Documents/LS빅데이터스쿨/mywebsite/posts/로지스틱 회귀분석 문제세트/leukemia_remission.txt\", sep='\\t')\ndf.head()\n\n\n\n\n\n\n\n\nREMISS\nCELL\nSMEAR\nINFIL\nLI\nBLAST\nTEMP\n\n\n\n\n0\n1\n0.8\n0.83\n0.66\n1.9\n1.10\n1.00\n\n\n1\n1\n0.9\n0.36\n0.32\n1.4\n0.74\n0.99\n\n\n2\n0\n0.8\n0.88\n0.70\n0.8\n0.18\n0.98\n\n\n3\n0\n1.0\n0.87\n0.87\n0.7\n1.05\n0.99\n\n\n4\n1\n0.9\n0.75\n0.68\n1.3\n0.52\n0.98\n\n\n\n\n\n\n\n\n# 로지스틱 회귀모델 적합\nimport statsmodels.api as sm\n\nmodel = sm.formula.logit(\"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP\", data=df).fit()\n\nprint(model.summary())\n\nOptimization terminated successfully.\n         Current function value: 0.399886\n         Iterations 10\n                           Logit Regression Results                           \n==============================================================================\nDep. Variable:                 REMISS   No. Observations:                   27\nModel:                          Logit   Df Residuals:                       20\nMethod:                           MLE   Df Model:                            6\nDate:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718\nTime:                        10:38:34   Log-Likelihood:                -10.797\nconverged:                       True   LL-Null:                       -17.186\nCovariance Type:            nonrobust   LLR p-value:                   0.04670\n==============================================================================\n                 coef    std err          z      P&gt;|z|      [0.025      0.975]\n------------------------------------------------------------------------------\nIntercept     64.2581     74.965      0.857      0.391     -82.670     211.187\nCELL          30.8301     52.135      0.591      0.554     -71.353     133.013\nSMEAR         24.6863     61.526      0.401      0.688     -95.903     145.275\nINFIL        -24.9745     65.281     -0.383      0.702    -152.923     102.974\nLI             4.3605      2.658      1.641      0.101      -0.849       9.570\nBLAST         -0.0115      2.266     -0.005      0.996      -4.453       4.430\nTEMP        -100.1734     77.753     -1.288      0.198    -252.567      52.220\n==============================================================================\n\nPossibly complete quasi-separation: A fraction 0.11 of observations can be\nperfectly predicted. This might indicate that there is complete\nquasi-separation. In this case some parameters will not be identified."
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-2.-해당-모델은-통계적으로-유의한가요-그-이유를-검정통계량를-사용해서-설명하시오.",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-2.-해당-모델은-통계적으로-유의한가요-그-이유를-검정통계량를-사용해서-설명하시오.",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 2. 해당 모델은 통계적으로 유의한가요? 그 이유를 검정통계량를 사용해서 설명하시오.",
+    "text": "문제 2. 해당 모델은 통계적으로 유의한가요? 그 이유를 검정통계량를 사용해서 설명하시오.\n\n모델 전체 유의성: LLR p-value가 0.04670로, 귀무가설을 기각할 수 있으며, 모델이 통계적으로 유의하다고 볼 수 있다. \n\n\n그러나 개별 변수들 중에서는 LI 변수만 0.1 수준에서 약간의 유의미성을 보이며, 나머지 변수들은 유의수준 0.05에서 유의하지 않다."
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-3.-유의수준이-0.2를-기준으로-통계적으로-유의한-변수는-몇개이며-어느-변수-인가요",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-3.-유의수준이-0.2를-기준으로-통계적으로-유의한-변수는-몇개이며-어느-변수-인가요",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 3. 유의수준이 0.2를 기준으로 통계적으로 유의한 변수는 몇개이며, 어느 변수 인가요?",
+    "text": "문제 3. 유의수준이 0.2를 기준으로 통계적으로 유의한 변수는 몇개이며, 어느 변수 인가요?\n\n2개  LI: 0.101  TEMP: 0.198"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-4.-다음-환자에-대한-오즈는-얼마인가요",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-4.-다음-환자에-대한-오즈는-얼마인가요",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 4. 다음 환자에 대한 오즈는 얼마인가요?",
+    "text": "문제 4. 다음 환자에 대한 오즈는 얼마인가요?\n\nCELL (골수의 세포성): 65%  SMEAR (골수편의 백혈구 비율): 45%  INFIL (골수의 백혈병 세포 침투 비율): 55%  LI (골수 백혈병 세포의 라벨링 인덱스): 1.2  BLAST (말초혈액의 백혈병 세포 수): 1.1세포/μL  TEMP (치료 시작 전 최고 체온): 0.9\n\n\n# odds = exp(64.2581 + 30.8301 * x1 +  24.6863 * x2 -24.9745 * x3 + 4.3605 * x4 -0.0115 * x5 -100.1734 * x6)\n\nimport numpy as np\nmy_odds = np.exp(64.2581 + 30.8301 * 0.65 +  24.6863 * 0.45 -24.9745 * 0.55 + 4.3605 * 1.2 -0.0115 * 1.1 -100.1734 * 1.0)\nprint(my_odds)\n\n1.70333068025198e-06"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-5.-위-환자의-혈액에서-백혈병-세포가-관측되지-않은-확률은-얼마인가요",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 5. 위 환자의 혈액에서 백혈병 세포가 관측되지 않은 확률은 얼마인가요?",
+    "text": "문제 5. 위 환자의 혈액에서 백혈병 세포가 관측되지 않은 확률은 얼마인가요?\n\np_hat = my_odds / (my_odds + 1)\nprint(p_hat)\n\n1.7033277789215156e-06"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-6.-temp-변수의-계수는-얼마이며-해당-계수를-사용해서-temp-변수가-백혈병-치료에-대한-영향을-설명하시오.",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 6. TEMP 변수의 계수는 얼마이며, 해당 계수를 사용해서 TEMP 변수가 백혈병 치료에 대한 영향을 설명하시오.",
+    "text": "문제 6. TEMP 변수의 계수는 얼마이며, 해당 계수를 사용해서 TEMP 변수가 백혈병 치료에 대한 영향을 설명하시오.\n\n# TEMP 변수의 계수\ntemp_coef = -100.1734\n\n# TEMP 변수의 오즈비\ntemp_odds_ratio = np.exp(temp_coef)\nprint(f\"TEMP 변수의 오즈비: {temp_odds_ratio}\")\n\nTEMP 변수의 오즈비: 3.1278444454718357e-44\n\n\n\nTEMP 높을수록 백혈병 세포가 관측되지 않을 확률이 매우 낮아짐"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-7.-cell-변수의-99-오즈비에-대한-신뢰구간을-구하시오.",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 7. CELL 변수의 99% 오즈비에 대한 신뢰구간을 구하시오.",
+    "text": "문제 7. CELL 변수의 99% 오즈비에 대한 신뢰구간을 구하시오.\n\n# CELL 변수의 계수와 표준 오차\ncell_coef = 30.8301\ncell_std_err = 52.135\n\n# 99% 신뢰구간의 z-값 (양쪽 검정 기준)\nfrom scipy.stats import norm\nz_value = norm.ppf(0.995)\n\n# 신뢰구간 계산\nlower_bound = cell_coef - z_value * cell_std_err\nupper_bound = cell_coef + z_value * cell_std_err\n\n# 오즈비 계산\ncell_odds_ratio_lower = np.exp(lower_bound)\ncell_odds_ratio_upper = np.exp(upper_bound)\n\n# 결과 출력\nprint(f\"CELL 변수의 99% 오즈비에 대한 신뢰구간:\")\nprint(f\"Lower bound (99% CI): {cell_odds_ratio_lower}\")\nprint(f\"Upper bound (99% CI): {cell_odds_ratio_upper}\")\n\nCELL 변수의 99% 오즈비에 대한 신뢰구간:\nLower bound (99% CI): 1.1683218982002717e-45\nUpper bound (99% CI): 5.141881884993857e+71"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-8.-주어진-데이터에-대하여-로지스틱-회귀-모델의-예측-확률을-구한-후-50-이상인-경우-1로-처리하여-혼동-행렬를-구하시오.",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 8. 주어진 데이터에 대하여 로지스틱 회귀 모델의 예측 확률을 구한 후, 50% 이상인 경우 1로 처리하여, 혼동 행렬를 구하시오.",
+    "text": "문제 8. 주어진 데이터에 대하여 로지스틱 회귀 모델의 예측 확률을 구한 후, 50% 이상인 경우 1로 처리하여, 혼동 행렬를 구하시오.\n\nfrom sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# 예측 확률 구하기\npred_probs = model.predict(df)\n\n# 50% 기준으로 예측값을 이진 값으로 변환\npredicted_classes = np.where(pred_probs &gt;= 0.5, 1, 0)\n\n# 실제값 (종속변수)\nactual_classes = df['REMISS']\n\n# 혼동 행렬 구하기\nconf_matrix = confusion_matrix(actual_classes, predicted_classes)\n\nprint(\"혼동 행렬:\")\nprint(conf_matrix)\n\n# 혼동행렬 시각화\nplt.figure(figsize=(6, 4))\nsns.heatmap(conf_matrix, annot=True, fmt=\"d\", cmap=\"Blues\", cbar=False)\nplt.title(\"Confusion Matrix\")\nplt.xlabel(\"Predicted Label\")\nplt.ylabel(\"True Label\")\nplt.show()\n\n혼동 행렬:\n[[15  3]\n [ 4  5]]"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-9.-해당-모델의-accuracy는-얼마인가요",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-9.-해당-모델의-accuracy는-얼마인가요",
+    "title": "로지스틱 회귀분석 문제세트",
+    "section": "문제 9. 해당 모델의 Accuracy는 얼마인가요?",
+    "text": "문제 9. 해당 모델의 Accuracy는 얼마인가요?\n\n# Accuracy 계산\naccuracy = accuracy_score(actual_classes, predicted_classes)\nprint(f\"모델의 Accuracy: {accuracy}\")\n\n모델의 Accuracy: 0.7407407407407407"
+  },
+  {
+    "objectID": "posts/로지스틱 회귀분석 문제세트/index.html#문제-10.-해당-모델의-f1-score를-구하세요.",
+    "href": "posts/로지스틱 회귀분석 문제세트/index.html#문제-10.-해당-모델의-f1-score를-구하세요.",
     "title": "로지스틱 회귀분석 문제세트",
     "section": "문제 10. 해당 모델의 F1 Score를 구하세요.",
     "text": "문제 10. 해당 모델의 F1 Score를 구하세요.\n\nf1 = f1_score(actual_classes, predicted_classes)\nprint(f\"모델의 F1 Score: {f1}\")\n\n모델의 F1 Score: 0.5882352941176471\n\n\n\n\n\n\n\n\n\nPlease enable JavaScript to view the comments powered by Disqus."
