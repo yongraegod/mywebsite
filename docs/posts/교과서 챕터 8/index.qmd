@@ -139,6 +139,8 @@ print(f"Upper bound (99% CI): {cell_odds_ratio_upper}")
 
 ```{python}
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # 예측 확률 구하기
 pred_probs = model.predict(df)
@@ -154,6 +156,14 @@ conf_matrix = confusion_matrix(actual_classes, predicted_classes)
 
 print("혼동 행렬:")
 print(conf_matrix)
+
+# 혼동행렬 시각화
+plt.figure(figsize=(6, 4))
+sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues", cbar=False)
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
+plt.show()
 ```
 
 
